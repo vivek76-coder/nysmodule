@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	color: white;
+	font-family: font-family: 'Segoe UI', sans-serif;
+}
+/* for dashboard*/
+header {
+    margin: 7% 8% 1px 7%;
+    background-image: linear-gradient(to right, #2096F1, #1DE9CA);
+    width: 85%;
+    height: 459px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+/* progress*/
+#container1{
+	width: 50%;
+	box-sizing: border-box;
+	align-content: center;
+	padding-left: 10%;
+
+}
+.progress {
+    width: 235px;
+    height: 235px;
+}
+.outer {
+    width: 230px;
+    height: 230px;
+    border: 1px solid green;
+    border-radius: 50%;
+    padding: 14%;
+}
+.inner {
+    width: 160px;
+    height: 160px;
+    border: 1px solid green;
+    border-radius: 50%;
+}
+/*image*/
+#container2{
+	box-sizing: border-box;
+	align-content: center;
+	text-align: center;
+
+    
+}
+#container2 > img {
+    height: 248px;
+    width: 239px;
+    border-radius: 50%;
+}
