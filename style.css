@@ -13,23 +13,19 @@ nav {
     box-sizing: border-box;
     width: 100%;
     height: 83px;
-    border: 1px solid black;
     position: fixed;
     top: 0;
-    background: whitesmoke;
+    background: white;
+    box-shadow: 10px 0 5px black;
 }
  .container-fluid{
     height: 83px;
     display: flex;
     justify-content:flex-start;
     box-sizing: border-box;
-    border: 1px solid black;
+    
  }
  /*div1 nav start here */
-  .div1-nav,.div2-nav,.div3-nav{
-
-    border: 1px solid green;
- }
  .div1-nav {
     width: 22%;
     display: flex;
@@ -56,15 +52,62 @@ nav {
     font-size: 22px;
     font-family:'Segoe UI', sans-serif;
  }
- #nav-text{
-   
- }
+ /* div 3 profile + layout */
  .div3-nav{
+  display: flex;
+  justify-content: flex-start;
   width: 28%;
  }
+ /* notification style*/
+ .notification {
+    margin: 1%;
+    width: 70px;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.style-icon-notification{
+    width: 48px;
+    height: 51px;
+    background: #f7f7f7;
+    border: 1px solid #666;
+    border-radius: 5px;
+    font-size: 26px;
+    color: #000000de;
+}
+ /*logo style*/
+ .logo{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    color: black;
+ }
+ .imgicon > img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+ }
+ /* logout style*/
+ .logout{
+    margin: 1%;
+    width: 70px;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
  
- 
- 
+ .style-icon-logout{
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 26px;
+    color: red;
+ }
 /* for dashboard*/
 header {
     margin: 10% 8% 1px 7%;
