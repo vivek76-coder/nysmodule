@@ -26,7 +26,7 @@ nav{
 .table-content{
 	margin: 8% 10%;
 	width: 80%;
-	height: auto;
+	height: 80%;
   overflow-x: scroll;
 }
 /* style table*/
@@ -35,12 +35,21 @@ table{
 }
 table ,td,th{
 	padding: 1% 10px;
-	border: 1px solid black;
+	border: 1px solid #dee2e6;
 	color: black;
 	border-collapse:collapse;
 }
 .link,.contact{
 	width: 20%;
+}
+/* inside table styling link */
+#btn{
+	margin-left: 50%;
+	padding: 0.25rem 1.5rem;
+	background: rgba(13, 110, 253, 1.0);
+	font-size: 0.875;
+	border-radius: 0.25rem;
+	text-decoration: none;
 }
 /* footer style */
 footer{
