@@ -1,1 +1,45 @@
-style.css
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'Segoe UI', sans-serif;
+	color: white;
+}
+/* navigatin bar*/
+nav{
+	background: rgba(13, 110, 253, 1.0);
+	width: 100%;
+	height: auto;
+	padding: 12px 29px;
+}
+/* style a conainer */
+ /*#container{
+ 	display: flex;
+ 	flex-wrap: wrap;
+ 	justify-content: space-between;
+ 	padding: 12px 5%;
+ }*/
+ /* style logo */
+ .logo{
+   font-size: 2rem;
+   text-decoration: none;
+   font-weight: bolder;
+ }
+ /* style table */
+.table-content{
+	margin: 8% 10%;
+	width: 80%;
+	height: auto;
+  overflow: scroll;
+  
+}
+table{
+	width: 100%;
+
+}
+table ,td,th{
+	padding: 1% 10px;
+	border: 1px solid black;
+	color: black;
+	border-collapse:collapse;
+}
