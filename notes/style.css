@@ -3,7 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family:'Segoe UI', sans-serif;
-	color: white;
+  color: white;
 }
 /* navigatin bar*/
 nav{
@@ -12,34 +12,76 @@ nav{
 	height: auto;
 	padding: 12px 29px;
 }
-/* style a conainer */
- /*#container{
- 	display: flex;
- 	flex-wrap: wrap;
- 	justify-content: space-between;
- 	padding: 12px 5%;
- }*/
  /* style logo */
  .logo{
    font-size: 2rem;
    text-decoration: none;
    font-weight: bolder;
  }
+ /* heading notes*/
+ h2{
+ 	color: black;
+ }
  /* style table */
 .table-content{
 	margin: 8% 10%;
 	width: 80%;
 	height: auto;
-  overflow: scroll;
-  
+  overflow-x: scroll;
 }
+/* style table*/
 table{
 	width: 100%;
-
 }
 table ,td,th{
 	padding: 1% 10px;
 	border: 1px solid black;
 	color: black;
 	border-collapse:collapse;
+}
+.link,.contact{
+	width: 20%;
+}
+/* footer style */
+footer{
+	padding: 60px 45px;
+	background-color: rgba(33, 37, 41, 1);
+}
+.row{
+	display: flex;
+	justify-content: space-around;
+	height: auto;
+}
+h5,h6{
+	font-size: 1rem;
+	font-weight: bolder;
+}
+.about{
+	width: 33%;
+}
+
+ul li a, ul li i, ul li span{
+	list-style-type: none;
+	color: rgba(108, 117, 125, 1);
+}
+.text-secondery{
+		color: rgba(108, 117, 125, 1);
+    text-wrap: wrap;
+    margin-top: 19px;
+}
+hr{
+
+		border-color: color: rgba(108, 117, 125, 1);;
+		margin-top: 40px;
+}
+.copyright{
+	color: rgba(108, 117, 125, 1);
+	margin-top: 10px;
+	text-align: center;
+}
+@media (max-width: 678px){
+	.row{
+		display: flex;
+		height: auto;
+	}
 }
