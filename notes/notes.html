@@ -1,109 +1,138 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NysLearners</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-<!--navigation bar -->
-<nav>
-	<div id="container">
-		<a href="" class="logo">
-			<i class="fa-solid fa-laptop-code"></i>
-			&nbsp;Nyslearners 
-		</a>
-	</div>
-</nav>
-<!-- main content -->
-<main>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- boostrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
 
-	<div class="table-content">
-		<h2>Notes</h2>
-		<table>
-			<thead>
-				<tr>
-				<th>#</th>
-				<th>Title</th>
-				<th>Description</th>
-				<th>Link</th>
-			</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>python</td>
-					<td>python notes</td>
-					<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view" id="btn">click</a></td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>python</td>
-					<td>python notes</td>
-					<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view" id="btn">click</a></td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>python</td>
-					<td>python notes</td>
-					<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view" id="btn">click</a></td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>python</td>
-					<td>python notes</td>
-					<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view" id="btn">click</a></td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>python</td>
-					<td>python notes</td>
-					<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view" id="btn">click</a></td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>python</td>
-					<td>python notes</td>
-					<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view" id="btn">click</a></td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>python</td>
-					<td>python notes</td>
-					<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view" id="btn">click</a></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</main>
-<footer>
-	<div class="footer-container">
-		<div class="row">
-			<div class="about">
-				<h5>Nyslearners Online Testing Platform</h5>
-				<p class="text-secondery">A comprehensive solution for conducting online tests with MCQs and coding problems.</p>
-			</div>
-			<div class="links">
-				<h6>Quick Links</h6>
-				<ul>
-					<li><a href="">home</a></li>
-					<li><a href="">logout</a></li>
-				</ul>
-			</div>
-			<div class="contact">
-				<h6>Contact</h6>
-				<ul>
-					<li><i class="fa-solid fa-phone"></i><span>+91 - 9713677950</span></li>
-				</ul>
+</head>
+
+<body>
+	<!--navigation bar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+		<div id="container">
+			<a href="" class="navbar-brand fw-bold">
+				<i class="fa-solid fa-laptop-code"></i>
+				&nbsp;Nyslearners
+			</a>
+		</div>
+	</nav>
+	<!-- main content -->
+	<main class="py-4">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="table-responsive">
+					<h2 class="mb-4">Notes</h2>
+					<table class="table table-bordered table-hover">
+						<thead class="thead-dark">
+							<tr>
+								<th>#</th>
+								<th>Title</th>
+								<th>Description</th>
+								<th>Link</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>python</td>
+								<td>python notes</td>
+								<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view"
+										class="btn btn-primary btn-sm">click</a></td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>python</td>
+								<td>python notes</td>
+								<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view"
+										class="btn btn-primary btn-sm">click</a></td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>python</td>
+								<td>python notes</td>
+								<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view"
+										class="btn btn-primary btn-sm">click</a></td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>python</td>
+								<td>python notes</td>
+								<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view"
+										class="btn btn-primary btn-sm">click</a></td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>python</td>
+								<td>python notes</td>
+								<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view"
+										class="btn btn-primary btn-sm">click</a></td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>python</td>
+								<td>python notes</td>
+								<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view"
+										class="btn btn-primary btn-sm">click</a></td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>python</td>
+								<td>python notes</td>
+								<td><a href="https://drive.google.com/file/d/1PAUDO44ODYUlV1Xra59OGNUd3RisGQ2Q/view"
+										class="btn btn-primary btn-sm">click</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
-		<hr>
-		<div class="copyright">
-                © 2025 Nyslearners Online Testing Platform. All rights reserved.
-            </div>
-	</div>
-</footer>
+	</main>
+	<footer class="bg-dark text-white py-4 mt-5">
+		<div class="footer-container">
+			<div class="row">
+				<div class="col-md-6 mb-3">
+					<h5 class="fw-bold">Nyslearners Online Testing Platform</h5>
+					<p class="text-secondery">A comprehensive solution for conducting online tests with MCQs and coding
+						problems.</p>
+				</div>
+				<div class="col-md-3 mb-3">
+					<h6>Quick Links</h6>
+					<ul class="list-unstyled">
+						<li><a href="" class="text-decoration-none text-secondary">home</a></li>
+						<li><a href="" class="text-decoration-none text-secondary">logout</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 mb-3">
+					<h6>Contact</h6>
+					<ul class="list-unstyled">
+						<li class="text-decoration-none text-secondary"><i class="fa-solid fa-phone"></i><span>+91 -
+								9713677950</span></li>
+					</ul>
+				</div>
+			</div>
+			<hr class="border-secondary">
+			<div class="text-center text-secondary small">
+				© 2025 Nyslearners Online Testing Platform. All rights reserved.
+			</div>
+		</div>
+	</footer>
 </body>
+
 </html>
