@@ -12,25 +12,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
     
     <style>
+        /* ✅ FIX 1: NAVBAR OVERLAP - Add top padding */
         body { 
-            margin: 0;
-            padding-top: 80px;
+        	margin: 0;
+            padding-top: 80px; /* navbar height + padding */
             background: #f8f9fa;
             height: 100vh;
             box-sizing: border-box;
         }
         
+        /* ✅ FIX 2: Proper container */
         .container-custom {
             margin: -18px auto;
             padding: 0;
         }
         
+        /* ✅ FIX 3: Sidebar improvements */
         .sidebar-custom {
             height: 100vh;
             overflow-y: auto;
             top: 0;
+            /*background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);*/
             border-right: 3px solid lightgrey;
         }
+        
+       /* .sidebar-custom .list-group-item {
+            border: none;
+            padding: 20px 25px;
+            color: rgba(255,255,255,0.9);
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+            font-size: 14px;
+        }
+        */
+       /* .sidebar-custom .list-group-item:hover {
+            background: rgba(255,255,255,0.1);
+            border-left-color: #3498db;
+            color: #fff;
+            transform: translateX(5px);
+            overflow-y: scroll;
+        }*/
         
         .sidebar-custom .list-group-item.active {
             background: rgba(52, 152, 219, 0.2);
@@ -38,32 +59,31 @@
             color: #3498db;
         }
         
-        /* MAIN VIDEO SECTION - 70% height */
-        .main-video-section {
-            height: 70vh;
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-            display: flex;
+        /* ✅ FIX 4: Video section */
+        .video-section {
+            height: 100vh;
+            display: block;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
         }
         
-        .video-placeholder {
-            width: 95%;
-            height: 85%;
-            margin: 20px 20px 0 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 15px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
+       .video-placeholder {
+			width: 95%;
+			height: 70%;
+			margin: 40px 40px 0 40px;
+			background: rgba(0, 0, 0, 0.7);
+			border-radius: 15px;
+			border: 3px solid rgba(255, 255, 255, 0.2);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			text-align: center;
+			backdrop-filter: blur(10px);
+		}
         
         .play-icon {
             font-size: 80px;
@@ -77,74 +97,35 @@
             transform: scale(1.1);
             color: #fff;
         }
-
-        /* BOTTOM CONTENT PANEL - 30% height */
-        .bottom-content-panel {
-            height: 30vh;
-            background: #1e1e2e;
-            border-top: 3px solid #3498db;
-            padding: 25px;
-            overflow-y: auto;
+        /* description */
+        .Description{
+        	width: 100%;
+        	height: 100%;
+        	background-color: red;
         }
-
-        /* SIMPLIFIED DESCRIPTION BOX - FULL WIDTH */
-        .description-box {
-            background: rgba(255,255,255,0.08);
-            border-radius: 12px;
-            padding: 25px;
-            height: 100%;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-        }
-
-        .description-box h4 {
-            color: #fff;
-            margin-bottom: 20px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-        }
-
-        .description-text {
-            color: rgba(255,255,255,0.9);
-            line-height: 1.7;
-            font-size: 15px;
-            margin-bottom: 25px;
-        }
-
-        .description-meta {
-            color: rgba(255,255,255,0.7);
-            font-size: 13px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
+        /* Navbar improvements */
         .navbar-brand {
             font-size: 1.5rem !important;
         }
         
+        /* Responsive */
         @media (max-width: 768px) {
             .sidebar-custom { 
                 height: 60vh; 
                 position: relative; 
             }
-            .main-video-section { height: 50vh; }
-            .bottom-content-panel { height: 40vh; }
+            .video-section { height: 38vh; }
             .row-custome{ flex-direction: column-reverse; }
             .video-placeholder{
-                width: 100%;
-                height: 90%;
-                border-radius: 0px;
-                margin: 10px 0 0 0;
+            	width: 100%;
+            	height: 100%;
+            	border-radius: 0px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- NAVBAR -->
+    <!-- ✅ FIXED NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm position-fixed w-100" style="z-index: 1049; top: 0;">
         <div class="container">
             <a href="#" class="navbar-brand fw-bold">
@@ -163,16 +144,88 @@
         </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- ✅ MAIN CONTENT -->
     <main>
         <div class="container-fluid container-custom">
             <div class="row no-gutters row-custome">
                 <!-- SIDEBAR -->
                 <div class="col-lg-3 col-md-4 sidebar-custom">
-                    <h3 class="card-header fw-bold text-center text-primary mt-3 mb-0">📚 Content</h3>
-                    <ul class="list-group mx-0 px-0 mt-2">
-                        <a href="#" class="list-group-item list-group-item-action active">
-                            <i class="fas fa-play-circle text-primary mr-3"></i>
+                	<h3 class="card-header fw-bold text-center">content</h3>
+                    <ul class="list-group mx-0 px-0">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-play-circle mr-3"></i>
+                            Working with Layers (12min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            Animating with Lights (18min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-camera mr-3"></i>
+                            Camera Techniques (22min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-cube mr-3"></i>
+                            3D Scene Building (25min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-magic mr-3"></i>
+                            Advanced Effects (30min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-chart-line mr-3"></i>
+                            Motion Graphics (20min)
+                        </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-play-circle mr-3"></i>
+                            Working with Layers (12min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            Animating with Lights (18min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-camera mr-3"></i>
+                            Camera Techniques (22min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-cube mr-3"></i>
+                            3D Scene Building (25min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-magic mr-3"></i>
+                            Advanced Effects (30min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-chart-line mr-3"></i>
+                            Motion Graphics (20min)
+                        </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-play-circle mr-3"></i>
+                            Working with Layers (12min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            Animating with Lights (18min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-camera mr-3"></i>
+                            Camera Techniques (22min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-cube mr-3"></i>
+                            3D Scene Building (25min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-magic mr-3"></i>
+                            Advanced Effects (30min)
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-chart-line mr-3"></i>
+                            Motion Graphics (20min)
+                        </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-play-circle mr-3"></i>
                             Working with Layers (12min)
                         </a>
                         <a href="#" class="list-group-item list-group-item-action">
@@ -198,10 +251,9 @@
                     </ul>
                 </div>
 
-                <!-- RIGHT COLUMN: Video + Description -->
+                <!-- VIDEO SECTION -->
                 <div class="col-lg-9 col-md-8">
-                    <!-- VIDEO SECTION (70vh) -->
-                    <div class="main-video-section">
+                    <div class="video-section">
                         <div class="video-placeholder">
                             <div class="play-icon" title="Play Video">
                                 <i class="fas fa-play-circle"></i>
@@ -215,30 +267,13 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- ✅ SIMPLE DESCRIPTION BOX (30vh) -->
-                    <div class="bottom-content-panel">
-                        <div class="description-box">
-                            <h4><i class="fas fa-info-circle mr-2"></i>Lesson Description</h4>
-                            
-                            <div class="description-text">
-                                Learn fundamental layer management techniques including stacking order, blending modes, opacity controls, and layer organization best practices. Master layer comps, pre-compositions, and essential shortcuts for efficient After Effects workflow.
-                            </div>
-                            
-                            <div class="description-meta">
-                                <span><i class="fas fa-clock mr-1"></i>12 min • Beginner</span>
-                                <span><i class="fas fa-tasks mr-1"></i>Key Concepts: 8</span>
-                                <span><i class="fas fa-fire mr-1"></i>1.2k students</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </main>
 
     <script>
-        // Sidebar item click handler - Updates description too
+        // Active sidebar item
         document.querySelectorAll('.list-group-item').forEach(item => {
             item.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -248,19 +283,7 @@
                 // Update video title
                 const titles = ['Working with Layers', 'Animating with Lights', 'Camera Techniques', '3D Scene Building', 'Advanced Effects', 'Motion Graphics'];
                 const index = Array.from(this.parentNode.children).indexOf(this);
-                document.querySelector('.video-placeholder h3').textContent = titles[index % titles.length];
-                
-                // Update description based on lesson
-                const descriptions = [
-                    "Learn fundamental layer management techniques including stacking order, blending modes, opacity controls, and layer organization best practices.",
-                    "Master lighting animation techniques from basic keyframe animation to advanced light rigging and dynamic illumination effects.",
-                    "Essential camera techniques including null object controllers, camera shake, parallax motion, and cinematic camera movements.",
-                    "Complete 3D scene construction from primitive shapes, extrusions, to importing external 3D models with proper lighting setup.",
-                    "Advanced visual effects including particle systems, expressions, scripts, and third-party plugin integration techniques.",
-                    "Motion graphics principles covering text animation, shape layers, mask animation, and kinetic typography workflows."
-                ];
-                
-                document.querySelector('.description-text').textContent = descriptions[index % descriptions.length];
+                document.querySelector('.video-placeholder h3').textContent = titles[index];
             });
         });
 
