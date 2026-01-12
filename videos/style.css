@@ -140,4 +140,10 @@ body {
         height: 50vh; 
         padding: 10px; 
     }
+    .video-container{
+        height: 30vh;
+    }
+    .video-info{
+        border-radius: 0%;
+    }
 }
