@@ -11,7 +11,14 @@ body {
     border-right: 2px solid #dee2e6;
     background: #fff;
 }
-
+.custom-style-h5 {
+    position:sticky;
+    top: -17px;
+    padding: 20px;
+    z-index: 9999;
+    background-color: white;
+    border-bottom: 1px solid grey;
+}
 .sidebar-custom .list-group-item {
     border: none;
     padding: 15px 20px; body { 
@@ -137,7 +144,7 @@ body {
         position: relative; 
     }
     .video-section { 
-        height: 50vh; 
+        height: 45vh; 
         padding: 10px; 
     }
     .video-container{
@@ -145,5 +152,10 @@ body {
     }
     .video-info{
         border-radius: 0%;
+    }
+    .custom-style-h5 {
+        position:sticky;
+    
+     
     }
 }
