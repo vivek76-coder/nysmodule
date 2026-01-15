@@ -17,6 +17,7 @@ nav {
     top: 0;
     background: white;
     box-shadow: 10px 0 5px black;
+    z-index: 99999;
 }
  .container-fluid{
     margin-top: 10px;
@@ -25,6 +26,7 @@ nav {
     justify-content:flex-end;
     box-sizing: border-box;
     flex-wrap: wrap;
+    z-index: 9999;
     
  }
  /*div1 nav start here */
@@ -130,55 +132,25 @@ nav {
 
  }
 /* for dashboard*/
-header {
+.custome-conatiner{
+    width: 75%;
+    height: 350px;
     margin: 170px 8% 1px 7%;
     background-image: linear-gradient(to right, #2096F1, #1DE9CA);
-    width: 85%;
-    height: 459px;
     border-radius: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-/* progress*/
-#container1{
-	width: 50%;
-	box-sizing: border-box;
-	align-content: center;
-	padding-left: 10%;
+   
 
 }
-.progress {
-    width: 235px;
-    height: 235px;
-}
-.outer {
-    width: 230px;
-    height: 230px;
-    border: 1px solid green;
-    border-radius: 50%;
-    padding: 14%;
-    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-                -6px -6px 10px -1px rgba(8, 95, 163,0.5);
-}
-.inner {
-    width: 160px;
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid green;
-    border-radius: 50%;
-    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2);
-}
+
 /*image*/
-#container2{
-	box-sizing: border-box;
-	align-content: center;
-	text-align: center;
-
+.custome-container2{
+    box-sizing: border-box;
+    align-content: center;
+    text-align: center;
     
 }
-#container2 > img {
+.custome-container2 > img {
+    position: relative;
     height: 248px;
     width: 239px;
     border-radius: 50%;
@@ -199,7 +171,7 @@ header {
     gap: 10px;
 }
 #main-content > .classdiv {
-    width: 300px;
+    width: 280px;
     height: 200px;
     border: 1px solid #666;
     border-radius: 10px;
@@ -232,11 +204,7 @@ header {
 .icon::before{}
 
 @media (max-width: 670px) {
-    header {
-       
-        display: block;
-        height: 548px;
-    }
+
      #container1 {
         padding: 0;
         width: 100%;
