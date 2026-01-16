@@ -1,0 +1,9 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.custom-container{
+	widows: 80%;
+	height: calc(100vh - 80px);
+}

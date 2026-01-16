@@ -1,35 +1,12 @@
-  // 🔥 VIDEO DATA - RGPV + Demo videos
-  const videos = [
-    { id: 'bGjtai-9uYg', title: 'How to Create Form in HTML | HTML Form Tags & Input Fields Explained (Beginner Friendly)', duration: '12min' },
+
+const videos = [
+    { id: 'pJdTyvufOdg', title: 'How to Create Form in HTML | HTML Form Tags & Input Fields Explained (Beginner Friendly)', duration: '12min' },
+    { id: 'bGjtai-9uYg', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
     { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
     { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
     { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
     { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
     { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },{ id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    { id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },{ id: 'qz8RPcx_M_8', title: 'HTML Basic Layout Explained | website kaise banaye | How to Create Basic Layout in HTML', duration: '20min ' },
-    
     { id: 'xaWdYbh4tH4', title: 'Motion Graphics (20min)', duration: '20min ' }
 ];
 
@@ -53,7 +30,7 @@ function loadVideos() {
     });
 }
 
-// 🔥 MAIN FUNCTION - Play video on sidebar click
+// Play video on sidebar click
 function playVideo(videoId, title, duration) {
     // Update active state
     document.querySelectorAll('#videoList .list-group-item').forEach(item => {
