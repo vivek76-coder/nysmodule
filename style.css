@@ -171,7 +171,7 @@ nav {
     gap: 10px;
 }
 #main-content > .classdiv {
-    width: 280px;
+    width: 300px;
     height: 200px;
     border: 1px solid #666;
     border-radius: 10px;
@@ -184,19 +184,19 @@ nav {
     border-radius: 10px;
     box-shadow: 6px 6px 10px 2px rgba(117, 117, 117, 0.15);
 }
-/* active effect at every card*/
-#main-content > .classdiv:active{
-    width: 300px;
-    height: 200px;
-    border: 1px solid #666;
-    border-radius: 10px;
-    
-}
 .inner-card{
     display: block;
   justify-items: center;
   text-align: center;
     font-size: 50px;
+    font-style: italic;
+    color: #495057;
+}
+.inner-card:hover{
+    display: block;
+  justify-items: center;
+  text-align: center;
+    font-size: 55px;
     font-style: italic;
     color: #495057;
 }

@@ -1,112 +1,125 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>nysleaners</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">\
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">\
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 </head>
+
 <body>
 	<!--navbar-->
 	<nav>
-	<div class="container-fluid">
-		<div class="div1-nav">
-        <!--home bar-->
-		<a href="" class="home-nav"> 
-			<i class="fa-solid fa-house"></i>
-		     &nbsp;Home 
-		</a>
-        </div>
-        <div class="div2-nav">
-        	<h2 id="nav-text">Nysonlearners</h2>
-        </div>
-        <div class="div3-nav">
-        	<!-- for notification -->
-        	<div class="notification">
-        		<button class="style-icon-notification">
-        			<i class="fa-regular fa-bell"></i>
-        		</button>
-        	</div>
-        	<!-- for logo -->
-            <div class="logo">
-        		<div class="username">
-        			<h3>name</h3>
-        		</div>
-				<div class="imgicon">
-					<img src="https://nyslearners.com/static/profile_pics/default.png" alt="image.png">	
-        		</div>
-       	 	</div>
-        	<!-- logout-->
-        	<div class="logout">
-        		<button class="style-icon-logout">
-        			<i class="fa-solid fa-power-off"></i>
-                </button>
-        	</div>
-        </div>	
-	</div>
-	</nav>
-<!-- dashboard-->
-   <div class="container-lg custome-conatiner mx-auto d-flex flex-column ">
-	<div class="col-lg-6 col-md-6 custome-container2 mx-auto"><img src="https://nyslearners.com/static/profile_pics/default.png"><br>
-		<p><span><b>Hi</b></span>&nbsp;Name</p>
-	</div>
-	<div class="row">
-	 <div class="col-md-8 mx-auto">
-		<div class="progress">
-			<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%"></div>
-		</div>
-	 </div>
-    </div>
-	 <h3 class="text-center text-white">your current status<h3>
-</div>
-<!-- content-->
-<main id="main-content">
-	<!-- notes -->
-	<div class="classdiv" onclick="window.location.href='notes.html'"style="background:#CFD0FA;">
-		<div class="inner-card">
-			<div class="icon">
-				<i class="fa-solid fa-book-open"></i>
+		<div class="container-fluid">
+			<div class="div1-nav">
+				<!--home bar-->
+				<a href="" class="home-nav">
+					<i class="fa-solid fa-house"></i>
+					&nbsp;Home
+				</a>
 			</div>
-			<div class="text small">Notes</div>
+			<div class="div2-nav">
+				<h2 id="nav-text">Nysonlearners</h2>
+			</div>
+			<div class="div3-nav">
+				<!-- for notification -->
+				<div class="notification">
+					<button class="style-icon-notification">
+						<i class="fa-regular fa-bell"></i>
+					</button>
+				</div>
+				<!-- for logo -->
+				<div class="logo">
+					<div class="username">
+						<h3>name</h3>
+					</div>
+					<div class="imgicon">
+						<img src="https://nyslearners.com/static/profile_pics/default.png" alt="image.png">
+					</div>
+				</div>
+				<!-- logout-->
+				<div class="logout">
+					<button class="style-icon-logout">
+						<i class="fa-solid fa-power-off"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- dashboard-->
+	<div class="container-lg custome-conatiner mx-auto d-flex flex-column ">
+		<div class="col-lg-6 col-md-6 custome-container2 mx-auto"><img
+				src="https://nyslearners.com/static/profile_pics/default.png"><br>
+			<p><span><b>Hi</b></span>&nbsp;Name</p>
+		</div>
+		<div class="row">
+			<div class="col-md-8 mx-auto">
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%"></div>
+				</div>
+			</div>
+		</div>
+		<h3 class="text-center text-white">your current status<h3>
 	</div>
-	</div>
-	<!-- video -->
-	<div class="classdiv" onclick="window.location.href='videos.html'"style="background:#D0E7F9;">
-	 <div class="inner-card">
-	 	<div class="icon">
-	 		<i class="fa-solid fa-video"></i>
-	 	</div>
-	 	<div class="text small">Video</div>
-	 </div>
-	</div>
-   <!-- resource -->
-	<div class="classdiv" onclick="window.location.href='resource.html'"style="background:#F8FFDD;">
-		<div class="inner-card">
-	 		<div class="icon"> 
-	 			<i class="fa-solid fa-web-awesome"></i>
-	 		</div>
-	 		<div class="text small">Resources</div>
-	 	</div>			
-	</div>
-   <!--pratices -->
-	<div class="classdiv" onclick="window.location.href=''" style="background:#D9F5DA;">
-	 	<div class="inner-card">
-	 		<div class="icon">
-	 			<i class="fa-solid fa-exclamation"></i>
-	 		</div>
-	 		<div class="text small">Upcoming Practice</div>
-	 	</div>
-	</div>
-	 <!-- other -->
-	 <!-- other -->
-	 <!-- other -->
-</main>
-<script src="script.js"></script>
+	<!-- content-->
+	<main id="main-content">
+		<!-- notes -->
+		<div class="classdiv" onclick="window.location.href='notes.html'" style="background:#CFD0FA;">
+			<div class="inner-card">
+				<div class="icon">
+					<i class="fa-solid fa-book-open"></i>
+				</div>
+				<div class="text small">Notes</div>
+			</div>
+		</div>
+		<!-- video -->
+		<div class="classdiv" onclick="window.location.href='videos.html'" style="background:#D0E7F9;">
+			<div class="inner-card">
+				<div class="icon">
+					<i class="fa-solid fa-video"></i>
+				</div>
+				<div class="text small">Video</div>
+			</div>
+		</div>
+		<!-- resource -->
+		<div class="classdiv" onclick="window.location.href='resource.html'" style="background:#F8FFDD;">
+			<div class="inner-card">
+				<div class="icon">
+					<i class="fa-solid fa-web-awesome"></i>
+				</div>
+				<div class="text small">Resources</div>
+			</div>
+		</div>
+		<!--pratices -->
+		<div class="classdiv" onclick="window.location.href=''" style="background:#D9F5DA;">
+			<div class="inner-card">
+				<div class="icon">
+					<i class="fa-solid fa-exclamation"></i>
+				</div>
+				<div class="text small">Upcoming Practice</div>
+			</div>
+		</div>
+		<!-- other -->
+		<!-- other -->
+		<!-- other -->
+	</main>
+	<script src="script.js"></script>
 </body>
+
 </html>
