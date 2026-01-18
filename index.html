@@ -62,73 +62,109 @@
 			</div>
 		</div>
 	</nav>
-	<!-- entire body -->
-<div class="container border shadow-lg">
+	<main id="main-content" class="mx-auto">
 	<!-- dashboard-->
-<div class="container custome-conatainer-dashboard mt-3 p-2 border shadow-md">
-	<div class="container-lg custome-conatiner mx-auto d-flex flex-column ">
-		<div class="col-lg-6 col-md-6 custome-container2 mx-auto">
-			<img src="https://nyslearners.com/static/profile_pics/default.png"> 
+	<div class="container-fluid-sm w-75 mx-auto custome-conatainer-dashboard p-2 border">
+		<div class="container-lg custome-conatiner mx-auto d-flex flex-column ">
+			<div class="col-lg-6 col-md-6 custome-container2 mx-auto">
+				<img src="https://nyslearners.com/static/profile_pics/default.png">
 				<br>
-			<p><span><b>Hi</b></span>&nbsp;Name</p>
-		</div>
-		<div class="row">
-			<div class="col-md-8 mx-auto">
-				<div class="progress">
-					<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%"></div>
+				<p><span><b>Hi</b></span>&nbsp;Name</p>
+			</div>
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%"></div>
+					</div>
 				</div>
 			</div>
+			<h3 class="text-center text-white">your current status<h3>
 		</div>
-		<h3 class="text-center text-white">your current status<h3>
 	</div>
-</div>
+	<!-- entire body -->
 	<!-- content-->
-	<main id="main-content">
-		<div class="container border rounded-0 p-4 shadow-md">
-			<div class="card border rounded m-2">
-		<div class="card-header h-50"><h3 class="card-title text-white">notes</h3></div>
-				 <!-- VIDEO SECTION -->
-			    <div class="card-body">
-			    	<div class="container mt-1">
-			    		 <div class="row g-0">
-   
-              <div class="col-lg-9 col-md-8">
-                <div class="video-section">
-                    <div class="video-container" id="videoPlayer">
-                        <!-- Default video loads here -->
-                    </div>
-                    <div class="video-info">
-                        <h4 id="videoTitle">Working with Layers (12min)</h4>
-                        <p class="text-muted mb-2" id="videoDuration">12 minutes • 2.5K views</p>
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-user-circle me-2 text-primary"></i>
-                            <span>Nyslearners Official</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- SIDEBAR -->
-             
-            <div class="col-lg-3 col-md-4 sidebar-custom  ">
-                <div class="fw-bold text-center mb-5 pb-2  custom-style-h5"><h5>📚 Course Content</h5>
-               </div>
-                <ul class="list-group list-group-flush custom-list" id="videoList">
-                    <!-- Videos dynamically loaded -->
-                </ul>
-            </div>
-        </div>
-			    	</div>
+			<div class="container-fluid-lg border shadow-lg mx-5">
+				<div class="card border rounded m-2">
+					<div class="card-header h-50">
+						<h3 class="card-title text-white">notes</h3>
+					</div>
+					<!-- VIDEO SECTION -->
+					<div class="card-body">
+						<div class="container-fluid h-50">
+							<iframe class="w-100" src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>e>
+					<div class="container-fluid border mt-1 shadow-sm w-100">
+						<span> <h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolor quae porro earum amet assumenda vero? Doloribus, sequi est! Quidem.</p></h3></span>
+					</div>
+					</div>
+                   </div>
 				</div>
-			     
-			</div>
-			<div class="card border rounded m-2">
-				<div class="card-header m-1"><h3 class="card-title text-white"> notes</h3></div>
-			    <div class="card-body"></div>
-			    </div>
-			</div>
-		</div>
+				<div class="card border rounded m-2">
+					<div class="card-header m-1">
+						<h3 class="card-title text-white"> notes</h3>
+					</div>
+					<div class="card-body">
+    
+          <!-- Hidden pdf URL (your app should set this to the PDF file URL) -->
+          <input type="hidden" id="pdfUrl" value="static/uploads/TS_1(selection).pdf">
+
+          <!-- Controls -->
+          <div class="d-flex align-items-center controls-row mb-2 pdf-controls">
+            <button id="openPDF" class="btn btn-secondary btn-sm">
+              <i class="bi bi-folder2-open"></i>&nbsp;Open PDF
+            </button>
+
+           
+            <div class="d-flex align-items-center ms-3">
+              <button id="previous" class="btn btn-outline-secondary btn-sm" disabled="">
+                <i class="bi bi-arrow-left-circle"></i>&nbsp;Prev
+              </button>
+              <span id="current_page" class="mx-2 fw-semibold">0 / 0</span>
+              <button id="next" class="btn btn-outline-secondary btn-sm" disabled="">
+                Next&nbsp;<i class="bi bi-arrow-right-circle"></i>
+              </button>
+            </div>
+
+            <!-- <div class="ms-auto">
+              <button id="allNotes" class="btn btn-dark btn-sm" onclick="window.history.back();">
+                <i class="bi bi-journal-text"></i>&nbsp;All Notes
+              </button>
+            </div> -->
+          </div>
+
+          <!-- viewer wrapper (scrollable) -->
+          <div class="pdf-canvas-wrap">
+            <!-- The canvas is hidden until PDF is loaded -->
+            <canvas class="pdf-viewer d-none" id="pdfCanvas"></canvas>
+          </div>
+      
+      </div>
+
+      <!-- flash messages (keeps your existing logic) -->
+   
+    
+    <!-- Flash Messages -->
+    <div id="flash-messages">
+        
+        
+        
+    </div>
+
+    <!-- JavaScript for Auto-Dismissing Messages -->
+    <script>
+        setTimeout(() => {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            flashMessages.forEach(msg => msg.remove());
+        }, 5000); // 5 seconds
+    </script>
+
+    <script src="script.js"></script>
+    </div>
+					</div>
+				</div>
+			
+	</div>
 	</main>
-</div>
+	</div>
 	<script src="script.js"></script>
 </body>
 
