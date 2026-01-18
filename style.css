@@ -132,8 +132,12 @@ nav {
 
  }
 /* for dashboard*/
+.custome-main-first-div{
+    margin-top: 8rem;
+    border-radius: 10px;
+}
+
 .custome-conatainer-dashboard{
-    margin-top: 10rem;
     border-radius: 20px 20px 0 0 ;
 }
 .custome-conatiner{
