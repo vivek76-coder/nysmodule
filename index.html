@@ -84,96 +84,50 @@
 	</div>
 	<!-- entire body -->
 	<!-- content-->
+      <div class="acordion" id="cardss">
 	      <!-- first card-->
-				<div class="card border rounded m-2">
-					<div class="card-header h-50" style="background:#FFF9C4; ">
+				<div class="card border rounded m-2 shadow-sm">
+					<div class="card-header h-50" data-toggle="collapse" data-target="#first-card" style="background:#FFF9C4;">
 						<h3 class="card-title text-white">video</h3>
 					</div>
 					<!-- VIDEO SECTION -->
 					<div class="card-body">
-						<div class="container-fluid h-50">
-							<iframe class="w-100" src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>e>
-					<div class="container-fluid border mt-1 shadow-sm w-100">
-						<span> <h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolor quae porro earum amet assumenda vero? Doloribus, sequi est! Quidem.</p></h3></span>
-					</div>
+						<div id="first-card" class="collapse" data-parent="#cardss">
+						<div class="embed-responsive-16by9">
+							<iframe class="w-100" src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<div class="container-fluid border mt-1 shadow-sm w-100">
+							<span class="blockquote h5 text-start"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolor quae porro earum amet assumenda vero? Doloribus, sequi est! Quidem.</p></span>
+						</div>
+					 </div>
 					</div>
          </div>
 				</div>
-				<!-- second card-->
-				<div class="card border rounded m-2">
-					<div class="card-header m-1" style="background:#81D4FA;">
-						<h3 class="card-title text-white"> notes</h3>
-					</div>
-					<div class="card-body">
-    
-          <!-- Hidden pdf URL (your app should set this to the PDF file URL) -->
-          <input type="hidden" id="pdfUrl" value="static/uploads/TS_1(selection).pdf">
-
-          <!-- Controls -->
-          <div class="d-flex align-items-center controls-row mb-2 pdf-controls">
-            <button id="openPDF" class="btn btn-secondary btn-sm">
-              <i class="bi bi-folder2-open"></i>&nbsp;Open PDF
-            </button>
-
-           
-            <div class="d-flex align-items-center ms-3">
-              <button id="previous" class="btn btn-outline-secondary btn-sm" disabled="">
-                <i class="bi bi-arrow-left-circle"></i>&nbsp;Prev
-              </button>
-              <span id="current_page" class="mx-2 fw-semibold">0 / 0</span>
-              <button id="next" class="btn btn-outline-secondary btn-sm" disabled="">
-                Next&nbsp;<i class="bi bi-arrow-right-circle"></i>
-              </button>
-            </div>
-
-            <!-- <div class="ms-auto">
-              <button id="allNotes" class="btn btn-dark btn-sm" onclick="window.history.back();">
-                <i class="bi bi-journal-text"></i>&nbsp;All Notes
-              </button>
-            </div> -->
-          </div>
-
-          <!-- viewer wrapper (scrollable) -->
-          <div class="pdf-canvas-wrap">
-            <!-- The canvas is hidden until PDF is loaded -->
-            <canvas class="pdf-viewer d-none" id="pdfCanvas"></canvas>
-          </div>
-      
-      </div>
-
-      <!-- flash messages (keeps your existing logic) -->
-   
-    
-    <!-- Flash Messages -->
-    <div id="flash-messages">
-        
-        
-        
-    </div>
-
-    <!-- JavaScript for Auto-Dismissing Messages -->
-    <script>
-        setTimeout(() => {
-            const flashMessages = document.querySelectorAll('.flash-message');
-            flashMessages.forEach(msg => msg.remove());
-        }, 5000); // 5 seconds
-    </script>
-
-    <script src="script.js"></script>
-    </div>
+				<!-- second-card-->
+		   				<div class="card border rounded m-2 shadow-sm">
+									<div class="card-header h-50" data-toggle="collapse" data-target="#second-card" style="background:#E0F2F1;">
+											<h3 class="card-title text-white">resource</h3>
+									</div>
+									<div class="card-body">
+												<div id="second-card" class="collapse" data-parent="#cardss">
+													sdfjksdbfjkhsdjkfbsd
+												</div>
+									</div>
+   						</div>
     <!-- third card-->
-    <div class="card border rounded m-2">
-					<div class="card-header h-50" style="background:#E0F2F1; ">
-						<h3 class="card-title text-white">resource</h3>
+    					<div class="card border rounded m-2 shadow-sm">
+									<div class="card-header h-50"  data-toggle="collapse" data-target="#third-card" style="background:#E0F2F1;">
+											<h3 class="card-title text-white">resource</h3>
+									</div>
+									<div class="card-body">
+												<div id="third-card" class="collapse" data-parent="#cardss">
+													skabfjasbnfklnasl
+												</div>
+									</div>
+   						</div>
+						</div>
 					</div>
-					<div class="card-body">
-						
-					</div>
-         </div>
 				</div>
-					</div>
-				</div>
-			
+			</div>
 	</div>
 	</main>
 	</div>
