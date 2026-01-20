@@ -204,7 +204,7 @@ nav {
      height: 223px;
     }
 }
-@media screen and (min-width:320px and max-width:480px) {
+@media screen and (max-width:480px) {
     iframe{
      height: 195px;
     }
@@ -215,9 +215,122 @@ nav {
   			border: 1px solid black;
   			direction: ltr;
    		}
-/*============================================*/
 		</style>
-			<script src="//mozilla.github.io/pdf.js/build/pdf.mjs" type="module"></script>
+</head>
+
+<body>
+<!--===========================================================================navbar=================================================-->
+	<nav>
+		<div class="container-fluid ">
+			<div class="div1-nav">
+<!-- ==========home bar ===========-->
+				<a href="" class="home-nav">
+					<i class="fa-solid fa-house"></i>
+					&nbsp;Home
+				</a>
+			</div>
+			<div class="div2-nav">
+				<h2 id="nav-text">Nysonlearners</h2>
+			</div>
+			<div class="div3-nav">
+<!--=============== for notification ============-->
+				<div class="notification">
+					<button class="style-icon-notification">
+						<i class="fa-regular fa-bell"></i>
+					</button>
+				</div>
+<!--================= for logo ================-->
+				<div class="logo">
+					<div class="username">
+						<h3>name</h3>
+					</div>
+					<div class="imgicon">
+						<img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png" alt="image.png">
+					</div>
+				</div>
+<!--================ logout====================-->
+				<div class="logout">
+					<button class="style-icon-logout">
+						<i class="fa-solid fa-power-off"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<main id="main-content" class=" mx-auto">
+			<div class="container-fluid-lg custome-main-first-div border shadow-lg mx-5 pt-1">
+<!--************************************************ DASHBOARD ***************************************************************-->
+	<div class="container-fluid-sm w-75 mx-auto custome-conatainer-dashboard p-2 border">
+		<div class="container-lg custome-conatiner mx-auto d-flex flex-column ">
+			<div class="col-lg-6 col-md-6 custome-container2 mx-auto">
+				<img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png">
+				<br>
+				<p><span><b>Hi</b></span>&nbsp;Name</p>
+			</div>
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%"></div>
+					</div>
+				</div>
+			</div>
+			<span class="text-center text-white fs-2">your current status<span>
+		</div>
+	</div>
+<!-- ======================================== CARD-STARTS-HERE=========================-->
+      <div class="acordion" id="cardss">
+<!--================================================================ FIRST-CARD =========================================-->
+				<div class="card border rounded m-2 shadow-sm">
+					<div class="card-header h-50" data-toggle="collapse" data-target="#first-card" >
+						<h3 class="card-title text-white">video</h3>
+					</div>
+				
+					<div class="card-body">
+						<div id="first-card" class="collapse" data-parent="#cardss">
+						<div class="embed-responsive-16by9">
+							<iframe class="w-100" src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<div class="border mt-1 shadow-sm w-100">
+							<span class="text-dark fs-5">python introduction</span>
+						</div>
+					 </div>
+					</div>
+         </div>
+				</div>
+<!--========================================================= SECOND-CARD=====================================================-->
+		   				<div class="card border rounded m-2 shadow-sm">
+									<div class="card-header h-50" data-toggle="collapse" data-target="#second-card" style="background:#E0F2F1;">
+											<h3 class="card-title text-white">resource</h3>
+									</div>
+									<div class="card-body">
+												<div id="second-card" class="collapse" data-parent="#cardss">
+									  <button id="prev" class="btn btn-secondary">Previous</button>
+									  <button id="next" class="btn btn-secondary">Next</button>
+									  &nbsp; &nbsp;
+									 <span class="text-dark">Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+									<canvas id="the-canvas" class="container-fluid border"></canvas>
+											</div>
+										</div>
+		   						</div>
+<!--============================================ THIRD-CARD =======================================================================-->
+    					<div class="card border rounded m-2 shadow-sm">
+									<div class="card-header h-50"  data-toggle="collapse" data-target="#third-card" style="background:#E0F2F1;">
+											<h3 class="card-title text-white">resource</h3>
+									</div>
+									<div class="card-body">
+												<div id="third-card" class="collapse" data-parent="#cardss">
+													skabfjasbnfklnasl
+												</div>
+									</div>
+   						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	</main>
+	</div>
+	<script src="script.js"></script>
+  <script src="//mozilla.github.io/pdf.js/build/pdf.mjs" type="module"></script>
 
 <script type="module">
    // If absolute URL from the remote server is provided, configure the CORS
@@ -319,121 +432,6 @@ nav {
     renderPage(pageNum);
   });
 </script>
-</head>
-
-<body>
-<!--===========================================================================navbar=================================================-->
-	<nav>
-		<div class="container-fluid ">
-			<div class="div1-nav">
-<!-- ==========home bar ===========-->
-				<a href="" class="home-nav">
-					<i class="fa-solid fa-house"></i>
-					&nbsp;Home
-				</a>
-			</div>
-			<div class="div2-nav">
-				<h2 id="nav-text">Nysonlearners</h2>
-			</div>
-			<div class="div3-nav">
-<!--=============== for notification ============-->
-				<div class="notification">
-					<button class="style-icon-notification">
-						<i class="fa-regular fa-bell"></i>
-					</button>
-				</div>
-<!--================= for logo ================-->
-				<div class="logo">
-					<div class="username">
-						<h3>name</h3>
-					</div>
-					<div class="imgicon">
-						<img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png" alt="image.png">
-					</div>
-				</div>
-<!--================ logout====================-->
-				<div class="logout">
-					<button class="style-icon-logout">
-						<i class="fa-solid fa-power-off"></i>
-					</button>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<main id="main-content" class="mx-auto">
-			<div class="container-fluid-lg custome-main-first-div border shadow-lg mx-5 p-4">
-<!--************************************************ DASHBOARD ***************************************************************-->
-	<div class="container-fluid-sm w-75 mx-auto custome-conatainer-dashboard p-2 border">
-		<div class="container-lg custome-conatiner mx-auto d-flex flex-column ">
-			<div class="col-lg-6 col-md-6 custome-container2 mx-auto">
-				<img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png">
-				<br>
-				<p><span><b>Hi</b></span>&nbsp;Name</p>
-			</div>
-			<div class="row">
-				<div class="col-md-8 mx-auto">
-					<div class="progress">
-						<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%"></div>
-					</div>
-				</div>
-			</div>
-			<h3 class="text-center text-white">your current status<h3>
-		</div>
-	</div>
-<!-- ======================================== CARD-STARTS-HERE=========================-->
-      <div class="acordion" id="cardss">
-<!--================================================================ FIRST-CARD =========================================-->
-				<div class="card border rounded m-2 shadow-sm">
-					<div class="card-header h-50" data-toggle="collapse" data-target="#first-card" >
-						<h3 class="card-title text-white">video</h3>
-					</div>
-				
-					<div class="card-body">
-						<div id="first-card" class="collapse" data-parent="#cardss">
-						<div class="embed-responsive-16by9">
-							<iframe class="w-100" src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						<div class="container-fluid border mt-1 shadow-sm w-100">
-							<span class="blockquote h5 text-start text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolor quae porro earum amet assumenda vero? Doloribus, sequi est! Quidem.</span>
-						</div>
-					 </div>
-					</div>
-         </div>
-				</div>
-<!--========================================================= SECOND-CARD=====================================================-->
-		   				<div class="card border rounded m-2 shadow-sm">
-									<div class="card-header h-50" data-toggle="collapse" data-target="#second-card" style="background:#E0F2F1;">
-											<h3 class="card-title text-white">resource</h3>
-									</div>
-									<div class="card-body">
-												<div id="second-card" class="collapse" data-parent="#cardss">
-									  <button id="prev">Previous</button>
-									  <button id="next">Next</button>
-									  &nbsp; &nbsp;
-									 <span class="text-dark">Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-									<canvas id="the-canvas" class="container-fluid"></canvas>
-											</div>
-										</div>
-		   						</div>
-<!--============================================ THIRD-CARD =======================================================================-->
-    					<div class="card border rounded m-2 shadow-sm">
-									<div class="card-header h-50"  data-toggle="collapse" data-target="#third-card" style="background:#E0F2F1;">
-											<h3 class="card-title text-white">resource</h3>
-									</div>
-									<div class="card-body">
-												<div id="third-card" class="collapse" data-parent="#cardss">
-													skabfjasbnfklnasl
-												</div>
-									</div>
-   						</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	</div>
-	</main>
-	</div>
-	<script src="script.js"></script>
-
 </body>
 
 </html>
