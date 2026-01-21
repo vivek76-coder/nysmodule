@@ -2,340 +2,379 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
-	<title>nysleaners</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-		integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">\
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
-		<style>
-			*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-body{
-	color: white;
-	font-family:'Segoe UI', sans-serif;
-    height: 100vh;
-}
-/* Navbar*/
-nav {
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    background: white;
-    box-shadow: 10px 0 5px black;
-    z-index: 99999;
-}
- .container-fluid{
-    margin-top: 10px;
-    height: auto;
-    display: flex;
-    justify-content:flex-end;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    z-index: 9999;
-    
- }
- /*div1 nav start here */
- .div1-nav {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    flex-shrink: 0;
-}
-/* home in nav*/
-.home-nav{
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 10px;
-    padding: 10px;
-    color: #0d6efd;
-    border: 1px solid #0d6efd;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+    <title>nysleaners</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">\
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
- }
- .home-nav:hover{
-    background-color: #0d6efd;
-    color: white;
- }
- /* nav text */
- .div2-nav{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #0d6efd;
-    font-size: 22px;
-    font-family:'Segoe UI', sans-serif;
-     margin-left: auto;
-        margin-right: auto;
-        flex-shrink: 0;
- }
- /* div 3 profile + layout */
- .div3-nav{
-  display: flex;
-  justify-content: flex-start;
-  width: auto;
- }
- /* notification style*/
- .notification {
-    margin: 1%;
-    width: 70px;
-    height: 74px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.style-icon-notification{
-    width: 48px;
-    height: 51px;
-    background: #f8f9fa;
-    border: 1px solid #f8f9fa;
-    border-radius: 5px;
-    font-size: 26px;
-    color: #000000de;
-}
-.style-icon-notification:hover{
-    background: #c6c7c8;
-    border-color: #c6c7c8;
-}
- /*logo style*/
- .logo{
-    display: flex;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-    color: black;
- }
- .imgicon > img{
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
- }
- /* logout style*/
- .logout{
-    margin: 1%;
-    width: 70px;
-    height: 74px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
- 
- .style-icon-logout{
-    width: 40px;
-    height: 40px;
-    background: white;
-    border: 1px solid red;
-    border-radius: 5px;
-    font-size: 0.875rem;
-    color: red;
- }
- .style-icon-logout:hover{
-    background-color: red;
-    color: white;
+        body {
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+        }
 
- }
-/* for dashboard*/
-.custome-main-first-div{
-    margin-top: 8rem;
-    border-radius: 10px;
-}
+        /* Navbar*/
+        nav {
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 0;
+            background: white;
+            box-shadow: 10px 0 5px black;
+            z-index: 99999;
+        }
 
-.custome-conatainer-dashboard{
-    border-radius: 20px 20px 0 0 ;
-}
-.custome-conatiner{
-    width: 100%;
-    height: 350px;
-    background-image: linear-gradient(to right, #2096F1, #1DE9CA);
-    border-radius: 20px 20px 0 0 ;
-   
+        .container-fluid {
+            margin-top: 10px;
+            height: auto;
+            display: flex;
+            justify-content: flex-end;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            z-index: 9999;
 
-}
+        }
 
-/*image*/
-.custome-container2{
-    box-sizing: border-box;
-    align-content: center;
-    text-align: center;
-    
-}
-.custome-container2 > img {
-    position: relative;
-    height: 248px;
-    width: 239px;
-    border-radius: 50%;
-     box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-                -6px -6px 10px -1px rgba(32, 150, 241,0.5);
-}
+        /*div1 nav start here */
+        .div1-nav {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            flex-shrink: 0;
+        }
 
-.card-header{
-    background-image: linear-gradient(to right,#2096F1);
-}
+        /* home in nav*/
+        .home-nav {
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 10px;
+            padding: 10px;
+            color: #0d6efd;
+            border: 1px solid #0d6efd;
 
-@media screen and (min-width:1024px) {
-    iframe{
-     height: 600px;
-    }
-}
+        }
 
-/* @media screen and (min-width:700px max-width:900px) {
-    iframe{
-     height: 223px;
-    }
-} */
-@media screen and (max-width:480px) {
-    iframe{
-     height: 195px;
-    }
+        .home-nav:hover {
+            background-color: #0d6efd;
+            color: white;
+        }
 
-}
+        /* nav text */
+        .div2-nav {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0d6efd;
+            font-size: 22px;
+            font-family: 'Segoe UI', sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+            flex-shrink: 0;
+        }
 
-/*==============================================*/
-			#the-canvas {
-  			border: 1px solid black;
-  			direction: ltr;
-   		}
-		</style>
+        /* div 3 profile + layout */
+        .div3-nav {
+            display: flex;
+            justify-content: flex-start;
+            width: auto;
+        }
+
+        /* notification style*/
+        .notification {
+            margin: 1%;
+            width: 70px;
+            height: 74px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .style-icon-notification {
+            width: 48px;
+            height: 51px;
+            background: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 5px;
+            font-size: 26px;
+            color: #000000de;
+        }
+
+        .style-icon-notification:hover {
+            background: #c6c7c8;
+            border-color: #c6c7c8;
+        }
+
+        /*logo style*/
+        .logo {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        .imgicon>img {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+        }
+
+        /* logout style*/
+        .logout {
+            margin: 1%;
+            width: 70px;
+            height: 74px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .style-icon-logout {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 1px solid red;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            color: red;
+        }
+
+        .style-icon-logout:hover {
+            background-color: red;
+            color: white;
+
+        }
+
+        /* for dashboard*/
+        .custome-main-first-div {
+            margin: 8rem 10% 0 10%;
+
+            border-radius: 10px;
+        }
+
+        .custome-conatainer-dashboard {
+            width: 90%;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .custome-conatiner {
+            width: 100%;
+            height: 350px;
+            background-image: linear-gradient(to right, #2096F1, #1DE9CA);
+            border-radius: 20px 20px 0 0;
+
+
+        }
+
+        /*image*/
+        .custome-container2 {
+            box-sizing: border-box;
+            align-content: center;
+            text-align: center;
+
+        }
+
+        .custome-container2>img {
+            position: relative;
+            height: 248px;
+            width: 239px;
+            border-radius: 50%;
+            box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(32, 150, 241, 0.5);
+        }
+
+        /* ============acordion and card-header============================== */
+        .acordion .card-header {
+            background-image: linear-gradient(to right, #2096F1);
+        }
+
+        /* ===================iframe-style================================= */
+        .yt-custome-design {
+            aspect-ratio: 16 / 9;
+            width: 100% !important;
+        }
+
+        /* ======================pdf-viewer-style============================== */
+        #the-canvas {
+            border: 1px solid black;
+            direction: ltr;
+        }
+
+        /* =============================media-query-style=================== */
+        @media screen and (min-width:600px) and (max-width:1024px) {
+            .custome-main-first-div {
+                margin: 8rem 5% 0 5%;
+
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .custome-main-first-div {
+                margin: 8rem 2% 0 2%;
+
+                border-radius: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<!--===========================================================================navbar=================================================-->
-	<nav>
-		<div class="container-fluid ">
-			<div class="div1-nav">
-<!-- ==========home bar ===========-->
-				<a href="" class="home-nav">
-					<i class="fa-solid fa-house"></i>
-					&nbsp;Home
-				</a>
-			</div>
-			<div class="div2-nav">
-				<h2 id="nav-text">Nysonlearners</h2>
-			</div>
-			<div class="div3-nav">
-<!--=============== for notification ============-->
-				<div class="notification">
-					<button class="style-icon-notification">
-						<i class="fa-regular fa-bell"></i>
-					</button>
-				</div>
-<!--================= for logo ================-->
-				<div class="logo">
-					<div class="username">
-						<h3>name</h3>
-					</div>
-					<div class="imgicon">
-						<img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png" alt="image.png">
-					</div>
-				</div>
-<!--================ logout====================-->
-				<div class="logout">
-					<button class="style-icon-logout">
-						<i class="fa-solid fa-power-off"></i>
-					</button>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<main id="main-content" class=" mx-auto">
-			<div class="container-fluid-lg custome-main-first-div border shadow-lg mx-5 pt-1">
-<!--************************************************ DASHBOARD ***************************************************************-->
-	<div class="container-fluid-sm w-75 mx-auto custome-conatainer-dashboard p-2 border">
-		<div class="container-lg custome-conatiner mx-auto d-flex flex-column ">
-			<div class="col-lg-6 col-md-6 custome-container2 mx-auto">
-				<img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png">
-				<br>
-				<p><span><b>Hi</b></span>&nbsp;Name</p>
-			</div>
-			<div class="row">
-				<div class="col-md-8 mx-auto">
-					<div class="progress">
-						<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%"></div>
-					</div>
-				</div>
-			</div>
-			<span class="text-center text-white fs-2">your current status<span>
-		</div>
-	</div>
-<!-- ======================================== CARD-STARTS-HERE=========================-->
-      <div class="acordion" id="cardss">
-<!--================================================================ FIRST-CARD =========================================-->
-				<div class="card border rounded m-2 shadow-sm">
-					<div class="card-header h-50" data-toggle="collapse" data-target="#first-card" >
-						<h3 class="card-title text-white">video</h3>
-					</div>
-				
-					<div class="card-body">
-						<div id="first-card" class="collapse" data-parent="#cardss">
-						<div class="embed-responsive-16by9">
-							<iframe class="w-100" src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						<div class="border mt-1 shadow-sm w-100">
-							<span class="text-dark fs-5">python introduction</span>
-						</div>
-					 </div>
-					</div>
-         </div>
-				</div>
-<!--========================================================= SECOND-CARD=====================================================-->
-		   				<div class="card border rounded m-2 shadow-sm">
-									<div class="card-header h-50" data-toggle="collapse" data-target="#second-card" style="background:#E0F2F1;">
-											<h3 class="card-title text-white">resource</h3>
-									</div>
-									<div class="card-body">
-												<div id="second-card" class="collapse" data-parent="#cardss">
-									  <button id="prev" class="btn btn-secondary">Previous</button>
-									  <button id="next" class="btn btn-secondary">Next</button>
-									  &nbsp; &nbsp;
-									 <span class="text-dark">Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-									<canvas id="the-canvas" class="container-fluid border"></canvas>
-											</div>
-										</div>
-		   						</div>
-<!--============================================ THIRD-CARD =======================================================================-->
-    					<div class="card border rounded m-2 shadow-sm">
-									<div class="card-header h-50"  data-toggle="collapse" data-target="#third-card" style="background:#E0F2F1;">
-											<h3 class="card-title text-white">resource</h3>
-									</div>
-									<div class="card-body">
-												<div id="third-card" class="collapse" data-parent="#cardss">
-													skabfjasbnfklnasl
-												</div>
-									</div>
-   						</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	</div>
-	</main>
-	</div>
-	<script src="//mozilla.github.io/pdf.js/build/pdf.mjs" type="module"></script>
+    <!--===========================================================================navbar=================================================-->
+    <nav>
+        <div class="container-fluid ">
+            <div class="div1-nav">
+                <!-- ==========home bar ===========-->
+                <a href="" class="home-nav">
+                    <i class="fa-solid fa-house"></i>
+                    &nbsp;Home
+                </a>
+            </div>
+            <div class="div2-nav">
+                <h2 id="nav-text">Nysonlearners</h2>
+            </div>
+            <div class="div3-nav">
+                <!--=============== for notification ============-->
+                <div class="notification">
+                    <button class="style-icon-notification">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                </div>
+                <!--================= for logo ================-->
+                <div class="logo">
+                    <div class="username">
+                        <h3>name</h3>
+                    </div>
+                    <div class="imgicon">
+                        <img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png"
+                            alt="image.png">
+                    </div>
+                </div>
+                <!--================ logout====================-->
+                <div class="logout">
+                    <button class="style-icon-logout">
+                        <i class="fa-solid fa-power-off"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content" class=" mx-auto">
+        <div class="container-fluid-lg custome-main-first-div border shadow-lg pt-1">
+            <!--************************************************ DASHBOARD ***************************************************************-->
+            <div class="container-fluid-sm  mx-auto custome-conatainer-dashboard p-2 border">
+                <div class="container-lg custome-conatiner mx-auto d-flex flex-column ">
+                    <div class="col-lg-6 col-md-6 custome-container2 mx-auto">
+                        <img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png">
+                        <br>
+                        <p><span><b>Hi</b></span>&nbsp;Name</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 mx-auto">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-center text-white fs-2">your current status<span>
+                </div>
+            </div>
+            <!-- ======================================== CARD-STARTS-HERE=========================-->
+            <div class="acordion" id="cardss">
+                <!--================================================================ FIRST-CARD =========================================-->
+                <div class="card border rounded m-2 shadow-sm">
+                    <div class="card-header h-50" data-toggle="collapse" data-target="#first-card">
+
+                        <h3 class="card-title text-white">
+                            <i class="fa-solid fa-video fs-1"></i>
+                            video
+                        </h3>
+
+                    </div>
+
+                    <div class="card-body">
+                        <div id="first-card" class="collapse" data-parent="#cardss">
+
+                            <!-- video-->
+                            <iframe class="yt-custome-design rounded shadow-sm"
+                                src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                            <div class="border mt-1 shadow-sm w-100 bg-light">
+                                <span class="text-dark fs-5">python introduction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--========================================================= SECOND-CARD=====================================================-->
+                <div class="card border rounded m-2 shadow-sm">
+                    <div class="card-header h-50" data-toggle="collapse" data-target="#second-card">
+                        <h3 class="card-title text-white"><i class="fa-solid fa-file-pdf"></i>resource</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="second-card" class="collapse" data-parent="#cardss">
+                            <button id="prev" class="btn btn-secondary">Previous</button>
+                            <button id="next" class="btn btn-secondary">Next</button>
+                            &nbsp; &nbsp;
+                            <span class="text-dark">Page: <span id="page_num"></span> / <span
+                                    id="page_count"></span></span>
+                            <canvas id="the-canvas" class="container-fluid border"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!--============================================ THIRD-CARD =======================================================================-->
+                <div class="card border rounded m-2 shadow-sm">
+                    <div class="card-header h-50" data-toggle="collapse" data-target="#third-card">
+                        <h3 class="card-title text-white"><i class="fa-solid fa-circle-exclamation"></i>resource</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="third-card" class="collapse" data-parent="#cardss">
+                            skabfjasbnfklnasl
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </main>
+    </div>
+    <script src="//mozilla.github.io/pdf.js/build/pdf.mjs" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.7.570/build/pdf.min.js"></script>
 
-	<script type="module">
-	  import * as pdfjsLib from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.530/build/pdf.min.mjs';
-        
+    <script type="module">
+        import * as pdfjsLib from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.530/build/pdf.min.mjs';
+
         // Set worker source
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.530/build/pdf.worker.min.mjs';
 
@@ -415,8 +454,8 @@ nav {
         }).catch((error) => {
             console.error('PDF load error:', error);
         });
-</script>
-	
+    </script>
+
 </body>
 
 </html>
