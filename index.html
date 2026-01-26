@@ -215,9 +215,30 @@
         }
 
         /* ===================iframe-style================================= */
-        .yt-custome-design {
-            aspect-ratio: 16 / 9;
-            width: 100% !important;
+        .yt-custome-design{
+            position: relative;
+        }
+        .yt-custome-design::before{
+            content: "";
+            display: block;
+            padding-top: 56.25%;
+        }
+        .yt-custome-design iframe {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: 15px;
+            border-bottom: 0;
+        }
+        .yt-title-custome {
+            margin: 22px 0 22px 0;
+            font-weight: bolder;
+            font-size: x-large;
+            border-top: 0;
+            border-radius: 3px;
         }
 
         /* ======================pdf-viewer-style============================== */
@@ -245,7 +266,7 @@
     </style>
 </head>
 
-<body>
+<body class="bg-light">
     <!--===========================================================================navbar=================================================-->
     <nav>
         <div class="container-fluid ">
@@ -314,7 +335,7 @@
 
                         <h3 class="card-title text-white">
                             <i class="fa-solid fa-video fs-1"></i>
-                            video
+                            VIDEO
                         </h3>
 
                     </div>
@@ -323,14 +344,15 @@
                         <div id="first-card" class="collapse" data-parent="#cardss">
 
                             <!-- video-->
-                            <iframe class="yt-custome-design rounded shadow-sm"
+                             <div class="yt-custome-design">
+                            <iframe class="border"
                                 src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                            <div class="border mt-1 shadow-sm w-100 bg-light">
-                                <span class="text-dark fs-5">python introduction</span>
+                            </div>
+                            <div class=" yt-title-custome   shadow-sm ">
+                                <span class="text-dark fs-5">INTRODUCTION TO PYTHON</span>
                             </div>
                         </div>
                     </div>
@@ -338,7 +360,7 @@
                 <!--========================================================= SECOND-CARD=====================================================-->
                 <div class="card border rounded m-2 shadow-sm">
                     <div class="card-header h-50" data-toggle="collapse" data-target="#second-card">
-                        <h3 class="card-title text-white"><i class="fa-solid fa-file-pdf"></i>resource</h3>
+                        <h3 class="card-title text-white"><i class="fa-solid fa-file-pdf"></i>NOTES</h3>
                     </div>
                     <div class="card-body">
                         <div id="second-card" class="collapse" data-parent="#cardss">
@@ -354,7 +376,7 @@
                 <!--============================================ THIRD-CARD =======================================================================-->
                 <div class="card border rounded m-2 shadow-sm">
                     <div class="card-header h-50" data-toggle="collapse" data-target="#third-card">
-                        <h3 class="card-title text-white"><i class="fa-solid fa-circle-exclamation"></i>resource</h3>
+                        <h3 class="card-title text-white"><i class="fa-solid fa-circle-exclamation"></i>RECOMANDATION</h3>
                     </div>
                     <div class="card-body">
                         <div id="third-card" class="collapse" data-parent="#cardss">
