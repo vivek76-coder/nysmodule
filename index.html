@@ -215,9 +215,14 @@
         }
 
         /* ===================iframe-style================================= */
-        .yt-custome-design {
-            aspect-ratio: 16 / 9;
-            width: 100% !important;
+        .yt-custome-design iframe{
+            position:relative;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            border: 0;
         }
 
         /* ======================pdf-viewer-style============================== */
@@ -323,12 +328,13 @@
                         <div id="first-card" class="collapse" data-parent="#cardss">
 
                             <!-- video-->
+                            <div class="yt-custome-design ">
                             <iframe class="yt-custome-design rounded shadow-sm"
-                                src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP"
+                                src="https://www.youtube.com/embed/othhoFChvQo?si=Ht2JqXYSMsz2wflX"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+                             </div>
                             <div class="border mt-1 shadow-sm w-100 bg-light">
                                 <span class="text-dark fs-5">python introduction</span>
                             </div>
