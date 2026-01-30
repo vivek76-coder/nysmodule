@@ -195,19 +195,23 @@
         }
 
         .content-body { 
-            padding: 2rem; 
+            padding: 1rem; 
             background: white; 
         }
 
         .video-container { 
             position: relative; 
-            height: 300px; 
             border-radius: 10px; 
             overflow: hidden; 
-            margin-bottom: 1rem;
+            padding-top: 56.25%;
         }
 
         .video-container iframe { 
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             width: 100%; 
             height: 100%; 
             border: none; 
@@ -364,24 +368,38 @@
             <!-- Notes Card -->
             <div class="content-card">
                 <button class="content-header" type="button" data-bs-toggle="collapse" data-bs-target="#notesContent">
-                    <i class="bi bi-sticky me-3"></i>Notes & Tasks
+                    <i class="bi bi-sticky me-3"></i>Preferance
                 </button>
                 <div id="notesContent" class="collapse">
                     <div class="content-body">
-                        <div class="row">
-                            <div class="col-lg-6 mb-4 mb-lg-0">
-                                <h6 class="mb-3"><i class="bi bi-journal-text text-primary"></i> Quick Notes</h6>
+                        <div class="column">
+                            <div class="col-lg-10 mb-4 mb-lg-0 mx-auto">
+                                <h6 class="mb-3"><i class="bi bi-journal-text text-primary"></i> Geekforgeeks</h6>
                                 <ul class="list-unstyled">
-                                    <li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Review Python functions</li>
-                                    <li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Practice loops</li>
+                                    <a href=""><li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Review Python functions</li></a>
+                                    <a href=""><li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Practice loops</li></a>
                                 </ul>
                             </div>
-                            <div class="col-lg-6">
-                                <h6 class="mb-3"><i class="bi bi-clock-history text-warning"></i> Upcoming</h6>
-                                <div class="alert alert-warning p-3">
-                                    <i class="bi bi-calendar-check me-2"></i>
-                                    <strong>Python Quiz</strong> - Tomorrow 10:00 AM
-                                </div>
+                           <div class="col-lg-10 mb-4 mb-lg-0 mx-auto">
+                                <h6 class="mb-3"><i class="bi bi-journal-text text-primary"></i> W3Sscholl</h6>
+                                <ul class="list-unstyled">
+                                   <a href=""><li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Review Python functions</li></a>
+                                    <a href=""><li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Practice loops</li></a>
+                                </ul>
+                            </div>
+                               <div class="col-lg-10 mb-4 mb-lg-0 mx-auto">
+                                <h6 class="mb-3"><i class="bi bi-journal-text text-primary"></i> tutorials point</h6>
+                                <ul class="list-unstyled">
+                                    <a href=""><li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Review Python functions</li></a>
+                                    <a href=""><li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Practice loops</li></a>
+                                </ul>
+                            </div>
+                            <div class="col-lg-10 mb-4 mb-lg-0 mx-auto">
+                                <<h6 class="mb-3"><i class="bi bi-journal-text text-primary"></i> tpoint tech</h6>
+                                <ul class="list-unstyled">
+                                    <a href=""><li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Review Python functions</li></a>
+                                   <a href=""> <li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Practice loops</li> </a>
+                                </ul>
                             </div>
                         </div>
                     </div>
