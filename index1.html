@@ -1,329 +1,344 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nysonlearners - LMS Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            min-height: 100vh;
+        :root {
+            --primary-gradient: linear-gradient(135deg, #2096F1 0%, #1DE9CA 100%);
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --card-hover-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
-        /* Keep your existing navbar styles */
-               nav {
-            box-sizing: border-box;
-            width: 100%;
-            height: auto;
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            min-height: 100vh;
+            background: #f8f9fa;
+        }
+
+        /* Navbar Styles */
+        .navbar-custom {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: white;
+            padding: 0.75rem 0;
             position: fixed;
             top: 0;
-            background: white;
-            box-shadow: 10px 0 5px black;
-            z-index: 99999;
-        }
-
-        .container-fluid-custome {
-            margin-top: 10px;
-            height: auto;
-            display: flex;
-            justify-content: flex-end;
-            box-sizing: border-box;
-            flex-wrap: wrap;
+            width: 100%;
             z-index: 9999;
-
         }
 
-        /*div1 nav start here */
-        .div1-nav {
-            width: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto;
-            flex-shrink: 0;
+        .navbar-brand-custom {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0d6efd !important;
         }
 
-        /* home in nav*/
-        .home-nav {
-            text-decoration: none;
-            font-size: 1rem;
-            border-radius: 10px;
-            padding: 10px;
+        .nav-link-home {
             color: #0d6efd;
             border: 1px solid #0d6efd;
-
+            border-radius: 10px;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
         }
 
-        .home-nav:hover {
+        .nav-link-home:hover {
             background-color: #0d6efd;
-            color: white;
+            color: white !important;
         }
 
-        /* nav text */
-        .div2-nav {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #0d6efd;
-            font-size: 22px;
-            font-family: 'Segoe UI', sans-serif;
-            margin-left: auto;
-            margin-right: auto;
-            flex-shrink: 0;
-        }
-
-        /* div 3 profile + layout */
-        .div3-nav {
-            display: flex;
-            justify-content: flex-start;
-            width: auto;
-        }
-
-        /* notification style*/
-        .notification {
-            margin: 1%;
-            width: 70px;
-            height: 74px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .style-icon-notification {
-            width: 48px;
-            height: 51px;
-            background: #f8f9fa;
-            border: 1px solid #f8f9fa;
-            border-radius: 5px;
-            font-size: 26px;
-            color: #000000de;
-        }
-
-        .style-icon-notification:hover {
-            background: #c6c7c8;
-            border-color: #c6c7c8;
-        }
-
-        /*logo style*/
-        .logo {
-            display: flex;
-            width: 50%;
-            justify-content: center;
-            align-items: center;
-            color: black;
-        }
-
-        .imgicon>img {
-            height: 70px;
-            width: 70px;
-            border-radius: 50%;
-        }
-
-        /* logout style*/
-        .logout {
-            margin: 1%;
-            width: 70px;
-            height: 74px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .style-icon-logout {
+        .notification-btn, .logout-btn {
             width: 40px;
             height: 40px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .notification-btn {
+            background: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            color: #6c757d;
+        }
+
+        .notification-btn:hover {
+            background: #e9ecef;
+            border-color: #e9ecef;
+        }
+
+        .logout-btn {
             background: white;
-            border: 1px solid red;
-            border-radius: 5px;
-            font-size: 0.875rem;
-            color: red;
+            border: 1px solid #dc3545;
+            color: #dc3545;
         }
 
-        .style-icon-logout:hover {
-            background-color: red;
+        .logout-btn:hover {
+            background: #dc3545;
             color: white;
-
         }
-        /* Main Dashboard */
+
+        /* Dashboard Container */
         .dashboard-container {
-            margin: 120px auto 20px; 
-           width: 95%;
-            background: white; border-radius: 20px; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1); overflow: hidden;
+            margin-top: 100px;
+            margin-bottom: 2rem;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
         }
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, #2096F1 0%, #1DE9CA 100%);
-            color: white; padding: 40px 0; text-align: center;
-            position: relative; overflow: hidden;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
+
         .hero-section::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            pointer-events: none;
         }
+
         .profile-img { 
-            width: 120px; height: 120px; border-radius: 50%; 
-            border: 5px solid rgba(255,255,255,0.3); margin: 0 auto 20px;
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%; 
+            border: 5px solid rgba(255,255,255,0.3); 
+            margin: 0 auto 1.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
         }
-        .progress-lg { height: 15px; border-radius: 10px; margin: 20px 0; }
 
         /* Stats Cards */
         .stats-grid {
-            padding: 30px; display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px; background: #f8f9fa;
+            padding: 2.5rem;
+            background: #f8f9fa;
         }
+
         .stat-card {
-            background: white; padding: 25px; border-radius: 15px;
-            text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
         }
-        .stat-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
-        .stat-icon { font-size: 2.5rem; margin-bottom: 15px; }
-        .stat-number { font-size: 2rem; font-weight: bold; margin-bottom: 5px; }
+
+        .stat-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+        }
+
+        .stat-icon { 
+            font-size: 2.5rem; 
+            margin-bottom: 1rem; 
+        }
+
+        .stat-number { 
+            font-size: 2.25rem; 
+            font-weight: 700; 
+            margin-bottom: 0.5rem; 
+        }
 
         /* Content Cards */
-        .content-grid { padding: 30px; }
         .content-card {
-            border: none; border-radius: 15px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 20px;
-            overflow: hidden; transition: box-shadow 0.3s;
+            border: none;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
-        .content-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+
+        .content-card:hover { 
+            box-shadow: var(--card-hover-shadow);
+            transform: translateY(-2px);
+        }
+
         .content-header {
-            background: linear-gradient(135deg, #2096F1 0%, #21CBF3 100%);
-            color: white; padding: 20px; cursor: pointer;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.25rem;
+            font-weight: 600;
         }
-        .content-body { padding: 25px; background: white; }
-        
-        /* Video & PDF */
-        .video-container { position: relative; height: 300px; border-radius: 10px; overflow: hidden; }
-        .video-container iframe { width: 100%; height: 100%; border: none; }
-        #the-canvas { width: 100%; height: 400px; border: 2px solid #dee2e6; border-radius: 10px; }
+
+        .content-body { 
+            padding: 2rem; 
+            background: white; 
+        }
+
+        .video-container { 
+            position: relative; 
+            height: 300px; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            margin-bottom: 1rem;
+        }
+
+        .video-container iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+        }
+
+        #the-canvas { 
+            width: 100%; 
+            height: 400px; 
+            border: 2px solid #dee2e6; 
+            border-radius: 10px; 
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .container-fluid { flex-direction: column; gap: 10px; padding: 10px; }
-            .dashboard-container { margin: 140px 10px 20px; width: calc(100% - 20px); }
-            .stats-grid { grid-template-columns: 1fr; padding: 20px; }
-            .content-grid { padding: 20px; }
+            .dashboard-container { 
+                margin: 110px 1rem 1rem; 
+                width: calc(100% - 2rem); 
+            }
+            .stats-grid, .content-grid { padding: 1.5rem; }
+            .navbar-custom .container-fluid { padding: 0 1rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Navbar (Your existing design) -->
-    <nav>
-        <div class="container-fluid-custome ">
-            <div class="div1-nav">
-                <!-- ==========home bar ===========-->
-                <a href="" class="home-nav">
-                    <i class="fa-solid fa-house"></i>
-                    &nbsp;Home
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom d-flex">
+        <div class="container-fluid ">
+
+            <div class="d-flex flex-fill align-items-center">
+                <a href="#" class="btn btn-outline-primary mx-3">
+                    <i class="bi bi-house"></i> Home
                 </a>
             </div>
-            <div class="div2-nav">
-                <h2 id="nav-text">Nysonlearners</h2>
-            </div>
-            <div class="div3-nav">
-                <!--=============== for notification ============-->
-                <div class="notification">
-                    <button class="style-icon-notification">
-                        <i class="fa-regular fa-bell"></i>
+
+            <a class="navbar-brand navbar-brand-custom mx-auto flex-fill text-center" href="#">
+                Nysonlearners
+            </a>
+            
+            <div class=" d-flex flex-fill justify-content-end">
+                <div class="d-flex align-items-center fl">
+                    <button class="notification-btn me-2" title="Notifications">
+                        <i class="bi bi-bell fs-5"></i>
+                    </button>
+                    
+                    <div class="d-flex align-items-center me-3">
+                        <div class="me-2">
+                            <div class="fw-bold small">Name</div>
+                        </div>
+                        <img src="https://nyslearners.com/static/profile_pics/default.png" 
+                             alt="Profile" class="rounded-circle" style="width: 45px; height: 45px;">
+                    </div>
+                    
+                    <button class="logout-btn" title="Logout">
+                        <i class="bi bi-power fs-6"></i>
                     </button>
                 </div>
-                <!--================= for logo ================-->
-                <div class="logo">
-                    <div class="username">
-                        <h3>name</h3>
-                    </div>
-                    <div class="imgicon">
-                        <img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png"
-                            alt="image.png">
-                    </div>
-                </div>
-                <!--================ logout====================-->
-                <div class="logout">
-                    <button class="style-icon-logout">
-                        <i class="fa-solid fa-power-off"></i>
-                    </button>
-                </div>
-            </div>
+            </div> 
         </div>
     </nav>
 
     <!-- Main Dashboard -->
     <div class="dashboard-container">
         <!-- Hero Section -->
-        <div class="hero-section">
-            <img class="profile-img" src="https://nyslearners.com/static/profile_pics/default.png" alt="Profile">
-            <h1>Welcome back, Name!</h1>
-            <p class="lead mb-4">Your learning journey at a glance</p>
-            <div class="container">
+        <section class="hero-section">
+            <div class="container position-relative">
+                <img class="profile-img" src="https://nyslearners.com/static/profile_pics/default.png" alt="Profile">
+                <h1 class="display-5 fw-bold mb-3">Welcome back, Name!</h1>
+                <p class="lead mb-4">Your learning journey at a glance</p>
                 <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="progress">
+                    <div class="col-lg-6">
+                        <div class="progress" style="height: 20px; border-radius: 10px;">
                             <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" 
-                                 style="width: 78%" role="progressbar">
-                                <span class="font-weight-bold">78% Complete</span>
+                                 style="width: 78%">
+                                <span class="fw-bold">78% Complete</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Stats Overview -->
         <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon text-primary"><i class="fa-solid fa-book"></i></div>
-                <div class="stat-number text-primary">12</div>
-                <div>Active Courses</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon text-success"><i class="fa-solid fa-check-double"></i></div>
-                <div class="stat-number text-success">8</div>
-                <div>Completed</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon text-info"><i class="fa-solid fa-clock"></i></div>
-                <div class="stat-number text-info">45h 30m</div>
-                <div>Study Time</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon text-warning"><i class="fa-solid fa-fire"></i></div>
-                <div class="stat-number text-warning">7</div>
-                <div>Day Streak</div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card h-100">
+                        <div class="stat-icon text-primary"><i class="bi bi-book"></i></div>
+                        <div class="stat-number text-primary">12</div>
+                        <div class="text-muted">Active Courses</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card h-100">
+                        <div class="stat-icon text-success"><i class="bi bi-check2-all"></i></div>
+                        <div class="stat-number text-success">8</div>
+                        <div class="text-muted">Completed</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card h-100">
+                        <div class="stat-icon text-info"><i class="bi bi-clock"></i></div>
+                        <div class="stat-number text-info">45h 30m</div>
+                        <div class="text-muted">Study Time</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card h-100">
+                        <div class="stat-icon text-warning"><i class="bi bi-fire"></i></div>
+                        <div class="stat-number text-warning">7</div>
+                        <div class="text-muted">Day Streak</div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Content Cards -->
-        <div class="content-grid">
+        <!-- Content Grid -->
+        <div class="content-grid p-4 p-md-5">
             <!-- Video Card -->
             <div class="content-card">
-                <div class="content-header" data-toggle="collapse" data-target="#videoContent">
-                    <h3><i class="fa-solid fa-video mr-3"></i>Video Lessons</h3>
-                </div>
+                <button class="content-header" type="button" data-bs-toggle="collapse" data-bs-target="#videoContent">
+                    <i class="bi bi-play-circle me-3"></i>Video Lessons
+                </button>
                 <div id="videoContent" class="collapse show">
                     <div class="content-body">
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/othhoFChvQo?si=Ht2JqXYSMsz2wflX" 
                                     title="Python Introduction" allowfullscreen></iframe>
                         </div>
-                        <div class="mt-3 p-3 bg-light rounded">
+                        <div class="p-3 bg-light rounded mt-3">
                             <h5>Python Introduction</h5>
-                            <p class="text-muted">Learn the basics of Python programming</p>
+                            <p class="text-muted mb-0">Learn the basics of Python programming</p>
                         </div>
                     </div>
                 </div>
@@ -331,42 +346,41 @@
 
             <!-- PDF Card -->
             <div class="content-card">
-                <div class="content-header" data-toggle="collapse" data-target="#pdfContent">
-                    <h3><i class="fa-solid fa-file-pdf mr-3"></i>Resources</h3>
-                </div>
-                <div id="pdfContent" class="collapse">
-                    <div class="container content-body">
-                      <div id="second-card" class="collapse" data-parent="#cardss">
-                            <button id="prev" class="btn btn-secondary">Previous</button>
-                            <button id="next" class="btn btn-secondary">Next</button>
-                            &nbsp; &nbsp;
-                            <span class="text-dark">Page: <span id="page_num"></span> / <span
-                                    id="page_count"></span></span>
-                            <canvas id="the-canvas" class="container-fluid border"></canvas>
+                <button class="content-header" type="button" data-bs-toggle="collapse" data-bs-target="#pdfContent">
+                    <i class="bi bi-file-earmark-pdf me-3"></i>Resources
+                </button>
+                <div id="pdfContent" class="collapse" data-bs-parent=".content-grid">
+                    <div class="content-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                            <button id="prev" class="btn btn-outline-secondary">Previous</button>
+                            <button id="next" class="btn btn-outline-secondary">Next</button>
+                            <span class="text-dark fw-medium">Page: <span id="page_num"></span> / <span id="page_count"></span></span>
                         </div>
+                        <canvas id="the-canvas"></canvas>
                     </div>
                 </div>
             </div>
 
             <!-- Notes Card -->
             <div class="content-card">
-                <div class="content-header" data-toggle="collapse" data-target="#notesContent">
-                    <h3><i class="fa-solid fa-sticky-note mr-3"></i>Notes & Tasks</h3>
-                </div>
+                <button class="content-header" type="button" data-bs-toggle="collapse" data-bs-target="#notesContent">
+                    <i class="bi bi-sticky me-3"></i>Notes & Tasks
+                </button>
                 <div id="notesContent" class="collapse">
                     <div class="content-body">
                         <div class="row">
-                            <div class="col-md-6">
-                                <h6>📝 Quick Notes</h6>
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <h6 class="mb-3"><i class="bi bi-journal-text text-primary"></i> Quick Notes</h6>
                                 <ul class="list-unstyled">
-                                    <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Review Python functions</li>
-                                    <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Practice loops</li>
+                                    <li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Review Python functions</li>
+                                    <li class="mb-2 p-2 bg-light rounded"><i class="bi bi-check-circle text-success me-2"></i>Practice loops</li>
                                 </ul>
                             </div>
-                            <div class="col-md-6">
-                                <h6>⏰ Upcoming</h6>
-                                <div class="alert alert-warning">
-                                    <small>Python Quiz - <strong>Tomorrow 10:00 AM</strong></small>
+                            <div class="col-lg-6">
+                                <h6 class="mb-3"><i class="bi bi-clock-history text-warning"></i> Upcoming</h6>
+                                <div class="alert alert-warning p-3">
+                                    <i class="bi bi-calendar-check me-2"></i>
+                                    <strong>Python Quiz</strong> - Tomorrow 10:00 AM
                                 </div>
                             </div>
                         </div>
@@ -376,29 +390,21 @@
         </div>
     </div>
 
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- PDF.js -->
- <script src="//mozilla.github.io/pdf.js/build/pdf.mjs" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.7.570/build/pdf.min.js"></script>
-
-    <script type="module">
-        import * as pdfjsLib from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.530/build/pdf.min.mjs';
-
-        // Set worker source
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.530/build/pdf.worker.min.mjs';
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.432/build/pdf.min.js"></script>
+    
+    <script>
+        // PDF.js setup with modern ES modules
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.432/build/pdf.worker.min.js';
 
         const url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
+        let pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null, scale = 1.2;
+        const canvas = document.getElementById('the-canvas');
+        const ctx = canvas.getContext('2d');
 
-        let pdfDoc = null,
-            pageNum = 1,
-            pageRendering = false,
-            pageNumPending = null,
-            scale = 1.2,
-            canvas = document.getElementById('the-canvas'),
-            ctx = canvas.getContext('2d');
-
-        /**
-         * Render page
-         */
         async function renderPage(num) {
             pageRendering = true;
             try {
@@ -421,9 +427,6 @@
             document.getElementById('page_num').textContent = num;
         }
 
-        /**
-         * Queue render
-         */
         function queueRenderPage(num) {
             if (pageRendering) {
                 pageNumPending = num;
@@ -432,29 +435,18 @@
             }
         }
 
-        /**
-         * Previous page
-         */
-        function onPrevPage() {
+        document.getElementById('prev').addEventListener('click', () => {
             if (pageNum <= 1) return;
             pageNum--;
             queueRenderPage(pageNum);
-        }
-        document.getElementById('prev').addEventListener('click', onPrevPage);
+        });
 
-        /**
-         * Next page
-         */
-        function onNextPage() {
+        document.getElementById('next').addEventListener('click', () => {
             if (pageNum >= pdfDoc.numPages) return;
             pageNum++;
             queueRenderPage(pageNum);
-        }
-        document.getElementById('next').addEventListener('click', onNextPage);
+        });
 
-        /**
-         * Load PDF
-         */
         pdfjsLib.getDocument(url).promise.then((pdfDoc_) => {
             pdfDoc = pdfDoc_;
             document.getElementById('page_count').textContent = pdfDoc.numPages;
