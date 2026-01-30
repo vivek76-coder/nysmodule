@@ -351,11 +351,11 @@
             <!-- PDF Card -->
             <div class="content-card">
                 <button class="content-header" type="button" data-bs-toggle="collapse" data-bs-target="#pdfContent">
-                    <i class="bi bi-file-earmark-pdf me-3"></i>Resources
+                    <i class="bi bi-file-earmark-pdf me-3"></i>Notes
                 </button>
                 <div id="pdfContent" class="collapse" data-bs-parent=".content-grid">
                     <div class="content-body">
-                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                        <div class="d-flex  align-items-center mb-3 flex-wrap gap-2">
                             <button id="prev" class="btn btn-outline-secondary">Previous</button>
                             <button id="next" class="btn btn-outline-secondary">Next</button>
                             <span class="text-dark fw-medium">Page: <span id="page_num"></span> / <span id="page_count"></span></span>
@@ -412,66 +412,107 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- PDF.js -->
-    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.432/build/pdf.min.js"></script>
-    
-    <script>
-        // PDF.js setup with modern ES modules
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.432/build/pdf.worker.min.js';
+    <script src="//mozilla.github.io/pdf.js/build/pdf.mjs" type="module"></script>
 
-        const url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
-        let pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null, scale = 1.2;
-        const canvas = document.getElementById('the-canvas');
-        const ctx = canvas.getContext('2d');
+<script type="module">
+  // If absolute URL from the remote server is provided, configure the CORS
+  // header on that server.
+  var url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
 
-        async function renderPage(num) {
-            pageRendering = true;
-            try {
-                const page = await pdfDoc.getPage(num);
-                const viewport = page.getViewport({ scale });
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
+  // Loaded via <script> tag, create shortcut to access PDF.js exports.
+  var { pdfjsLib } = globalThis;
 
-                const renderContext = { canvasContext: ctx, viewport };
-                await page.render(renderContext).promise;
+  // The workerSrc property shall be specified.
+  pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.mjs';
 
-                pageRendering = false;
-                if (pageNumPending !== null) {
-                    renderPage(pageNumPending);
-                    pageNumPending = null;
-                }
-            } catch (error) {
-                console.error('Render error:', error);
-            }
-            document.getElementById('page_num').textContent = num;
+  var pdfDoc = null,
+      pageNum = 1,
+      pageRendering = false,
+      pageNumPending = null,
+      scale = 0.8,
+      canvas = document.getElementById('the-canvas'),
+      ctx = canvas.getContext('2d');
+
+  /**
+   * Get page info from document, resize canvas accordingly, and render page.
+   * @param num Page number.
+   */
+  function renderPage(num) {
+    pageRendering = true;
+    // Using promise to fetch the page
+    pdfDoc.getPage(num).then(function(page) {
+      var viewport = page.getViewport({scale: scale});
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      // Render PDF page into canvas context
+      var renderContext = {
+        canvasContext: ctx,
+        viewport: viewport
+      };
+      var renderTask = page.render(renderContext);
+
+      // Wait for rendering to finish
+      renderTask.promise.then(function() {
+        pageRendering = false;
+        if (pageNumPending !== null) {
+          // New page rendering is pending
+          renderPage(pageNumPending);
+          pageNumPending = null;
         }
+      });
+    });
 
-        function queueRenderPage(num) {
-            if (pageRendering) {
-                pageNumPending = num;
-            } else {
-                renderPage(num);
-            }
-        }
+    // Update page counters
+    document.getElementById('page_num').textContent = num;
+  }
 
-        document.getElementById('prev').addEventListener('click', () => {
-            if (pageNum <= 1) return;
-            pageNum--;
-            queueRenderPage(pageNum);
-        });
+  /**
+   * If another page rendering in progress, waits until the rendering is
+   * finised. Otherwise, executes rendering immediately.
+   */
+  function queueRenderPage(num) {
+    if (pageRendering) {
+      pageNumPending = num;
+    } else {
+      renderPage(num);
+    }
+  }
 
-        document.getElementById('next').addEventListener('click', () => {
-            if (pageNum >= pdfDoc.numPages) return;
-            pageNum++;
-            queueRenderPage(pageNum);
-        });
+  /**
+   * Displays previous page.
+   */
+  function onPrevPage() {
+    if (pageNum <= 1) {
+      return;
+    }
+    pageNum--;
+    queueRenderPage(pageNum);
+  }
+  document.getElementById('prev').addEventListener('click', onPrevPage);
 
-        pdfjsLib.getDocument(url).promise.then((pdfDoc_) => {
-            pdfDoc = pdfDoc_;
-            document.getElementById('page_count').textContent = pdfDoc.numPages;
-            renderPage(pageNum);
-        }).catch((error) => {
-            console.error('PDF load error:', error);
-        });
-    </script>
+  /**
+   * Displays next page.
+   */
+  function onNextPage() {
+    if (pageNum >= pdfDoc.numPages) {
+      return;
+    }
+    pageNum++;
+    queueRenderPage(pageNum);
+  }
+  document.getElementById('next').addEventListener('click', onNextPage);
+
+  /**
+   * Asynchronously downloads PDF.
+   */
+  pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+    pdfDoc = pdfDoc_;
+    document.getElementById('page_count').textContent = pdfDoc.numPages;
+
+    // Initial/first page rendering
+    renderPage(pageNum);
+  });
+</script>
 </body>
 </html>
