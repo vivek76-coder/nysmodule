@@ -1,506 +1,259 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
-    <title>nysleaners</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">\
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            color: white;
-            font-family: 'Segoe UI', sans-serif;
-            height: 100vh;
-        }
-
-        /* Navbar*/
-        nav {
-            box-sizing: border-box;
-            width: 100%;
-            height: auto;
-            position: fixed;
-            top: 0;
-            background: white;
-            box-shadow: 10px 0 5px black;
-            z-index: 99999;
-        }
-
-        .container-fluid {
-            margin-top: 10px;
-            height: auto;
-            display: flex;
-            justify-content: flex-end;
-            box-sizing: border-box;
-            flex-wrap: wrap;
-            z-index: 9999;
-
-        }
-
-        /*div1 nav start here */
-        .div1-nav {
-            width: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto;
-            flex-shrink: 0;
-        }
-
-        /* home in nav*/
-        .home-nav {
-            text-decoration: none;
-            font-size: 1rem;
-            border-radius: 10px;
-            padding: 10px;
-            color: #0d6efd;
-            border: 1px solid #0d6efd;
-
-        }
-
-        .home-nav:hover {
-            background-color: #0d6efd;
-            color: white;
-        }
-
-        /* nav text */
-        .div2-nav {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #0d6efd;
-            font-size: 22px;
-            font-family: 'Segoe UI', sans-serif;
-            margin-left: auto;
-            margin-right: auto;
-            flex-shrink: 0;
-        }
-
-        /* div 3 profile + layout */
-        .div3-nav {
-            display: flex;
-            justify-content: flex-start;
-            width: auto;
-        }
-
-        /* notification style*/
-        .notification {
-            margin: 1%;
-            width: 70px;
-            height: 74px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .style-icon-notification {
-            width: 48px;
-            height: 51px;
-            background: #f8f9fa;
-            border: 1px solid #f8f9fa;
-            border-radius: 5px;
-            font-size: 26px;
-            color: #000000de;
-        }
-
-        .style-icon-notification:hover {
-            background: #c6c7c8;
-            border-color: #c6c7c8;
-        }
-
-        /*logo style*/
-        .logo {
-            display: flex;
-            width: 50%;
-            justify-content: center;
-            align-items: center;
-            color: black;
-        }
-
-        .imgicon>img {
-            height: 70px;
-            width: 70px;
-            border-radius: 50%;
-        }
-
-        /* logout style*/
-        .logout {
-            margin: 1%;
-            width: 70px;
-            height: 74px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .style-icon-logout {
-            width: 40px;
-            height: 40px;
-            background: white;
-            border: 1px solid red;
-            border-radius: 5px;
-            font-size: 0.875rem;
-            color: red;
-        }
-
-        .style-icon-logout:hover {
-            background-color: red;
-            color: white;
-
-        }
-
-        /* for dashboard*/
-        .custome-main-first-div {
-            margin: 8rem 10% 0 10%;
-
-            border-radius: 10px;
-        }
-
-        .custome-conatainer-dashboard {
-            width: 90%;
-            border-radius: 20px 20px 0 0;
-        }
-
-        .custome-conatiner {
-            width: 100%;
-            height: 350px;
-            background-image: linear-gradient(to right, #2096F1, #1DE9CA);
-            border-radius: 20px 20px 0 0;
-
-
-        }
-
-        /*image*/
-        .custome-container2 {
-            box-sizing: border-box;
-            align-content: center;
-            text-align: center;
-
-        }
-
-        .custome-container2>img {
-            position: relative;
-            height: 248px;
-            width: 239px;
-            border-radius: 50%;
-            box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(32, 150, 241, 0.5);
-        }
-
-        /* ============acordion and card-header============================== */
-        .acordion .card-header {
-            background-image: linear-gradient(to right, #2096F1);
-        }
-
-        /* ===================iframe-style================================= */
-<<<<<<< HEAD
-        .yt-custome-design iframe{
-            position:relative;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            border: 0;
-=======
-        .yt-custome-design{
-            position: relative;
-        }
-        .yt-custome-design::before{
-            content: "";
-            display: block;
-            padding-top: 56.25%;
-        }
-        .yt-custome-design iframe {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            border-radius: 15px;
-            border-bottom: 0;
-        }
-        .yt-title-custome {
-            margin: 22px 0 22px 0;
-            font-weight: bolder;
-            font-size: x-large;
-            border-top: 0;
-            border-radius: 3px;
->>>>>>> 34267c467256da6ab7037d453b5a0b79396e95d4
-        }
-
-        /* ======================pdf-viewer-style============================== */
-        #the-canvas {
-            border: 1px solid black;
-            direction: ltr;
-        }
-
-        /* =============================media-query-style=================== */
-        @media screen and (min-width:600px) and (max-width:1024px) {
-            .custome-main-first-div {
-                margin: 8rem 5% 0 5%;
-
-                border-radius: 10px;
-            }
-        }
-
-        @media screen and (max-width:600px) {
-            .custome-main-first-div {
-                margin: 8rem 2% 0 2%;
-
-                border-radius: 10px;
-            }
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NysLearners - Course Materials Focused View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .dark ::-webkit-scrollbar-thumb { background: #475569; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
 </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200">
+    <!-- NAVBAR-NYSLEANER-->
+<header class="h-16 bg-white dark:bg-card-dark border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-6 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<span class="text-xl font-bold text-primary tracking-tight">NysLearners</span>
+</div>
+<div class="hidden md:flex items-center bg-slate-100 dark:bg-slate-800 rounded-full px-4 py-2 w-96">
+<span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder-slate-400" placeholder="Search courses, lessons..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-card-dark"></span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-slate-200 dark:border-slate-700">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-semibold">Demo User</p>
+<p class="text-xs text-slate-500">Premium Member</p>
+</div>
+<img alt="User Profile" class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBRwZ93uh21FkPlLiNq1g-3Eo65yNn-6T8Zr6KGWq_KEmMjZYzr9-qnoB6wsjSP5OxOtnu37A2Dsa5dqOxhjbj5N9Y1e6j5Q3rJPCs3h2M6iegXIhry55Skg1s3kpy2QmeEikLJ3vQLy-bhuJWNsXmmR3mw0jyMEn1tGksWddIQOJxPSMEqB-mghr5lkD1GTY3BV2lISFsVesLFnya6S3oFVInud6Ici3BjIbjSbUzUz0KsB2CS3OeLl2mW1PhWzzaAGyR08uxUvov"/>
+<button class="material-symbols-outlined text-slate-400">expand_more</button>
+</div>
+</div>
+</header>
+<!-- ASIDE-TAG-->
+<div class="flex flex-1 overflow-hidden">
+<aside class="w-64 bg-white dark:bg-card-dark border-r border-slate-200 dark:border-slate-800 flex flex-col overflow-y-auto hidden lg:flex">
+<nav class="p-4 space-y-6">
+<div>
+<h3 class="px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Course</h3>
+<ul class="space-y-1">
+<li><a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined text-xl">add_box</span> Add Course</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined text-xl">quiz</span> Attempt Test</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined text-xl">emoji_events</span> Competition</a></li>
+</ul>
+</div>
+<div>
+<h3 class="px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">My Learnings</h3>
+<ul class="space-y-1">
+<li><a class="flex items-center gap-3 px-4 py-2.5 text-primary bg-blue-50 dark:bg-primary/10 rounded-lg font-medium" href="#"><span class="material-symbols-outlined text-xl">video_library</span> My Courses</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined text-xl">assignment</span> Assignments</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined text-xl">description</span> Notes &amp; PDFs</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined text-xl">leaderboard</span> Score Board</a></li>
+</ul>
+</div>
+<div>
+<h3 class="px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Settings</h3>
+<ul class="space-y-1">
+<li><a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined text-xl">person</span> Edit Profile</a></li>
+<li><a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined text-xl">lock_open</span> Change Password</a></li>
+</ul>
+</div>
+</nav>
+<div class="mt-auto p-4 border-t border-slate-200 dark:border-slate-800">
+<button class="flex items-center gap-3 px-4 py-2.5 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg w-full transition-colors">
+<span class="material-symbols-outlined text-xl">logout</span> Logout
+            </button>
+</div>
+</aside>
+<!--VIDEO-NOTES-OTHER-->
+<main class="flex-1 overflow-y-auto p-6">
+<div class="flex items-center gap-2 text-sm text-slate-500 mb-6 max-w-5xl mx-auto">
+<span>My Courses</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span>Python Programming</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-medium">Chapter 4: Selection Statements</span>
+</div>
+<div class="max-w-5xl mx-auto space-y-6">
+<div class="bg-black aspect-video rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 relative group">
+<img alt="Video Thumbnail" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHkAPQ-QcXt8ueLbFfjDORKD2_R-Th67cTtqU8WyYcT4CMnmmMChWE1uNIjv0R7vZm-6oYlo5k2OcsDEpI5aO2ZUin-_-pSj7XVw9yR6NdtFPON2ECPFzhFGUoLjmbpb0UG5ODVQUwVGVsJcfDMagXPv3pf9KTXdO-ftB6X19vSjpKvRO0Rt5oY81NI4bYbd5D4f9W-QkebcfogIrhxtcOjkd3i03CKXgML6iE59Sw6uG27HK5oCNLqSqq3mKYv-ygMxM5qKmsXm9Y"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center shadow-2xl hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-4xl ml-1">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent flex items-center justify-between">
+<div class="flex items-center gap-4 text-white">
+<span class="material-symbols-outlined cursor-pointer">play_arrow</span>
+<span class="material-symbols-outlined cursor-pointer">volume_up</span>
+<span class="text-sm font-medium">10:45 / 24:00</span>
+</div>
+<div class="flex items-center gap-4 text-white">
+<span class="material-symbols-outlined cursor-pointer">closed_caption</span>
+<span class="material-symbols-outlined cursor-pointer">settings</span>
+<span class="material-symbols-outlined cursor-pointer">fullscreen</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-start justify-between">
+<div>
+<h1 class="text-2xl font-bold dark:text-white">Chapter 4: Understanding Selection Statements (If-Else)</h1>
+<p class="text-slate-500 mt-1">Python Programming Fundamentals • 2,450 students enrolled</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2.5 bg-white dark:bg-card-dark border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">share</span>
+</button>
+<button class="p-2.5 bg-white dark:bg-card-dark border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">bookmark</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="font-bold text-lg mb-4">About this lesson</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                        In this session, we dive deep into the core of logic in Python programming. You will learn how to make your programs intelligent by using selection statements. We cover single if statements, if-else blocks, and complex nested conditional structures.
+                    </p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="flex flex-col gap-1 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+<span class="text-xs text-slate-500 uppercase font-semibold">Duration</span>
+<span class="text-sm font-medium">24 Minutes</span>
+</div>
+<div class="flex flex-col gap-1 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+<span class="text-xs text-slate-500 uppercase font-semibold">Difficulty</span>
+<span class="text-sm font-medium">Beginner</span>
+</div>
+<div class="flex flex-col gap-1 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+<span class="text-xs text-slate-500 uppercase font-semibold">Language</span>
+<span class="text-sm font-medium">English</span>
+</div>
+<div class="flex flex-col gap-1 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+<span class="text-xs text-slate-500 uppercase font-semibold">Format</span>
+<span class="text-sm font-medium">Full HD Video</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col shadow-sm overflow-hidden">
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-primary/5 dark:bg-primary/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">picture_as_pdf</span>
+<span class="font-semibold text-primary">Study Notes.pdf</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded transition-colors"><span class="material-symbols-outlined text-lg">zoom_out</span></button>
+<span class="text-xs font-medium">100%</span>
+<button class="p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded transition-colors"><span class="material-symbols-outlined text-lg">zoom_in</span></button>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-900/50">
+<div class="bg-white dark:bg-card-dark p-8 md:p-12 shadow-sm border border-slate-100 dark:border-slate-800 prose dark:prose-invert max-w-none prose-sm">
+<h2 class="text-center border-b pb-4">Python Selection Statements</h2>
+<p>Selection statements allow us to control the flow of a program based on certain conditions. In Python, these are primarily implemented using 'if', 'elif', and 'else'.</p>
+<div class="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg font-mono text-xs border border-slate-200 dark:border-slate-700 my-6">
+<span class="text-primary font-bold">if</span> condition:<br/>
+                                <span class="text-slate-500"># code to execute</span><br/>
+<span class="text-primary font-bold">else</span>:<br/>
+                                <span class="text-slate-500"># code if false</span>
+</div>
+<p><strong>Key points to remember:</strong></p>
+<ul>
+<li>Indentation is crucial in Python (4 spaces is the standard).</li>
+<li>A colon (:) is mandatory after the condition statement.</li>
+<li>Logical operators (and, or, not) can be used to combine multiple conditions.</li>
+<li>The 'elif' statement allows you to check multiple expressions for true.</li>
+</ul>
+<div class="my-8 p-12 bg-slate-50 dark:bg-slate-800/50 rounded-lg flex flex-col items-center justify-center border-2 border-dashed border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-4xl text-slate-300 mb-2">account_tree</span>
+<span class="text-slate-400 font-medium">Logic Flowchart Diagram</span>
+<span class="text-[10px] text-slate-400 mt-1 uppercase tracking-widest">Interactive Placeholder</span>
+</div>
+<p>Common Mistakes:</p>
+<ol>
+<li>Forgetting the colon at the end of the if line.</li>
+<li>Inconsistent indentation within blocks.</li>
+<li>Using '=' (assignment) instead of '==' (equality) in conditions.</li>
+</ol>
+</div>
+</div>
+<div class="p-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 bg-white dark:bg-card-dark">
+<span>Page 1 of 12</span>
+<div class="flex gap-4">
+<button class="flex items-center gap-1 hover:text-primary transition-colors font-medium">
+<span class="material-symbols-outlined text-sm">chevron_left</span> Prev
+                        </button>
+<button class="flex items-center gap-1 hover:text-primary transition-colors font-medium">
+                            Next <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!--FOOTER-->
+<footer class="bg-slate-900 text-slate-400 py-10 px-6 border-t border-slate-800">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-4 text-white">
+<span class="material-symbols-outlined text-primary">school</span>
+<span class="text-xl font-bold">NysLearners</span>
+</div>
+<p class="text-sm leading-relaxed">A comprehensive solution for conducting online tests with MCQs and coding problems. Empowering learners worldwide.</p>
+</div>
+<div>
+<h5 class="text-white font-semibold mb-4">Quick Links</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Courses</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Practice Tests</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Community</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-semibold mb-4">Support</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-semibold mb-4">Contact</h5>
+<ul class="space-y-3 text-sm">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">email</span> nysonaiconnect@gmail.com</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">call</span> +91 - 9713677950</li>
+<li class="flex gap-4 mt-4">
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg text-white">alternate_email</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg text-white">share</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800 text-center text-xs">
+<p>© 2025 NysLearners Online Testing Platform. All rights reserved.</p>
+</div>
+</footer>
 
-<body class="bg-light">
-    <!--===========================================================================navbar=================================================-->
-    <nav>
-        <div class="container-fluid ">
-            <div class="div1-nav">
-                <!-- ==========home bar ===========-->
-                <a href="" class="home-nav">
-                    <i class="fa-solid fa-house"></i>
-                    &nbsp;Home
-                </a>
-            </div>
-            <div class="div2-nav">
-                <h2 id="nav-text">Nysonlearners</h2>
-            </div>
-            <div class="div3-nav">
-                <!--=============== for notification ============-->
-                <div class="notification">
-                    <button class="style-icon-notification">
-                        <i class="fa-regular fa-bell"></i>
-                    </button>
-                </div>
-                <!--================= for logo ================-->
-                <div class="logo">
-                    <div class="username">
-                        <h3>name</h3>
-                    </div>
-                    <div class="imgicon">
-                        <img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png"
-                            alt="image.png">
-                    </div>
-                </div>
-                <!--================ logout====================-->
-                <div class="logout">
-                    <button class="style-icon-logout">
-                        <i class="fa-solid fa-power-off"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <main id="main-content" class=" mx-auto">
-        <div class="container-fluid-lg custome-main-first-div border shadow-lg pt-1">
-            <!--************************************************ DASHBOARD ***************************************************************-->
-            <div class="container-fluid-sm  mx-auto custome-conatainer-dashboard p-2 border">
-                <div class="container-lg custome-conatiner mx-auto d-flex flex-column ">
-                    <div class="col-lg-6 col-md-6 custome-container2 mx-auto">
-                        <img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png">
-                        <br>
-                        <p><span><b>Hi</b></span>&nbsp;Name</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 mx-auto">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="text-center text-white fs-2">your current status<span>
-                </div>
-            </div>
-            <!-- ======================================== CARD-STARTS-HERE=========================-->
-            <div class="acordion" id="cardss">
-                <!--================================================================ FIRST-CARD =========================================-->
-                <div class="card border rounded m-2 shadow-sm">
-                    <div class="card-header h-50" data-toggle="collapse" data-target="#first-card">
-
-                        <h3 class="card-title text-white">
-                            <i class="fa-solid fa-video fs-1"></i>
-                            VIDEO
-                        </h3>
-
-                    </div>
-
-                    <div class="card-body">
-                        <div id="first-card" class="collapse" data-parent="#cardss">
-
-                            <!-- video-->
-<<<<<<< HEAD
-                            <div class="yt-custome-design ">
-                            <iframe class="yt-custome-design rounded shadow-sm"
-                                src="https://www.youtube.com/embed/othhoFChvQo?si=Ht2JqXYSMsz2wflX"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                             </div>
-                            <div class="border mt-1 shadow-sm w-100 bg-light">
-                                <span class="text-dark fs-5">python introduction</span>
-=======
-                             <div class="yt-custome-design">
-                            <iframe class="border"
-                                src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <div class=" yt-title-custome   shadow-sm ">
-                                <span class="text-dark fs-5">INTRODUCTION TO PYTHON</span>
->>>>>>> 34267c467256da6ab7037d453b5a0b79396e95d4
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--========================================================= SECOND-CARD=====================================================-->
-                <div class="card border rounded m-2 shadow-sm">
-                    <div class="card-header h-50" data-toggle="collapse" data-target="#second-card">
-                        <h3 class="card-title text-white"><i class="fa-solid fa-file-pdf"></i>NOTES</h3>
-                    </div>
-                    <div class="card-body">
-                        <div id="second-card" class="collapse" data-parent="#cardss">
-                            <button id="prev" class="btn btn-secondary">Previous</button>
-                            <button id="next" class="btn btn-secondary">Next</button>
-                            &nbsp; &nbsp;
-                            <span class="text-dark">Page: <span id="page_num"></span> / <span
-                                    id="page_count"></span></span>
-                            <canvas id="the-canvas" class="container-fluid border"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <!--============================================ THIRD-CARD =======================================================================-->
-                <div class="card border rounded m-2 shadow-sm">
-                    <div class="card-header h-50" data-toggle="collapse" data-target="#third-card">
-                        <h3 class="card-title text-white"><i class="fa-solid fa-circle-exclamation"></i>RECOMANDATION</h3>
-                    </div>
-                    <div class="card-body">
-                        <div id="third-card" class="collapse" data-parent="#cardss">
-                            skabfjasbnfklnasl
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-        </div>
-    </main>
-    </div>
-    <script src="//mozilla.github.io/pdf.js/build/pdf.mjs" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.7.570/build/pdf.min.js"></script>
-
-    <script type="module">
-        import * as pdfjsLib from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.530/build/pdf.min.mjs';
-
-        // Set worker source
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.530/build/pdf.worker.min.mjs';
-
-        const url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
-
-        let pdfDoc = null,
-            pageNum = 1,
-            pageRendering = false,
-            pageNumPending = null,
-            scale = 1.2,
-            canvas = document.getElementById('the-canvas'),
-            ctx = canvas.getContext('2d');
-
-        /**
-         * Render page
-         */
-        async function renderPage(num) {
-            pageRendering = true;
-            try {
-                const page = await pdfDoc.getPage(num);
-                const viewport = page.getViewport({ scale });
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-
-                const renderContext = { canvasContext: ctx, viewport };
-                await page.render(renderContext).promise;
-
-                pageRendering = false;
-                if (pageNumPending !== null) {
-                    renderPage(pageNumPending);
-                    pageNumPending = null;
-                }
-            } catch (error) {
-                console.error('Render error:', error);
-            }
-            document.getElementById('page_num').textContent = num;
-        }
-
-        /**
-         * Queue render
-         */
-        function queueRenderPage(num) {
-            if (pageRendering) {
-                pageNumPending = num;
-            } else {
-                renderPage(num);
-            }
-        }
-
-        /**
-         * Previous page
-         */
-        function onPrevPage() {
-            if (pageNum <= 1) return;
-            pageNum--;
-            queueRenderPage(pageNum);
-        }
-        document.getElementById('prev').addEventListener('click', onPrevPage);
-
-        /**
-         * Next page
-         */
-        function onNextPage() {
-            if (pageNum >= pdfDoc.numPages) return;
-            pageNum++;
-            queueRenderPage(pageNum);
-        }
-        document.getElementById('next').addEventListener('click', onNextPage);
-
-        /**
-         * Load PDF
-         */
-        pdfjsLib.getDocument(url).promise.then((pdfDoc_) => {
-            pdfDoc = pdfDoc_;
-            document.getElementById('page_count').textContent = pdfDoc.numPages;
-            renderPage(pageNum);
-        }).catch((error) => {
-            console.error('PDF load error:', error);
-        });
-    </script>
-
-</body>
-
-</html>
+</body></html>
